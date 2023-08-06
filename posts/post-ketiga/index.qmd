@@ -1,0 +1,14 @@
+---
+title: "blog ketiga"
+author: "testtttt"
+date: "2023-08-03"
+categories: [news]
+---
+## Tutorial 
+***
+{{< embed final-project.ipynb >}}
+
+
+
+
+
