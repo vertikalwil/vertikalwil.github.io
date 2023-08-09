@@ -67,7 +67,7 @@
     "href": "index.html",
     "title": ".",
     "section": "",
-    "text": "Table Of Contents\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nHabits\n\n\n\n\n\n\n\n\n\n\n\n\nJohn Doe\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 3, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\n  \n\n\n\n\nblog ketiga\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 3, 2023\n\n\ntesttttt\n\n\n\n\n\n\nNo matching items"
+    "text": "Table Of Contents\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nHabits\n\n\n\n\n\n\n\n\n\n\n\n\nJohn Doe\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nblog ketiga\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 3, 2023\n\n\ntesttttt\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -131,5 +131,19 @@
     "title": "Habits",
     "section": "Going to sleep",
     "text": "Going to sleep\n\nGet in bed\nCount sheep"
+  },
+  {
+    "objectID": "posts/post-ketiga/post-ketiga-1/index.html",
+    "href": "posts/post-ketiga/post-ketiga-1/index.html",
+    "title": "vertikal",
+    "section": "",
+    "text": "#tessssssssss"
+  },
+  {
+    "objectID": "posts/post-keempat/post-keempat1/index.html",
+    "href": "posts/post-keempat/post-keempat1/index.html",
+    "title": "vertikal",
+    "section": "",
+    "text": "#tesssss"
   }
 ]

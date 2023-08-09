@@ -2,10 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/post-ketiga/post-ketiga-1/index.html",
       "/posts/post-ketiga/final-project.html",
       "/posts/post-keempat/index.html",
-      "/posts/post-with-code/index.html",
+      "/posts/post-keempat/post-keempat1/index.html",
       "/posts/welcome/index.html",
+      "/posts/post-with-code/index.html",
       "/posts/post-ketiga/index.html"
     ]
   }
