@@ -1,20 +1,70 @@
 project:
   type: website
-  output-dir: docs
+  #resources: 
+  #  - "*.css"
+    
+execute:
+  freeze: true
 
 website:
-  title: "vertikal"
+  title: "Vertikal Willis"
+  site-url: https://vertikalwil.github.io/
+  description: Personal website, portfolio and blog
+  #repo-url: https://github.com/vertikalwil/
+  #repo-actions: issue
+
   navbar:
+    #logo: ELLAKAYE-logo-light.png
+    title: "VERTIKAL<span class='icon-line'></span>WILLIS"
     right:
-      - about.qmd
-      - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+      - text: about
+        href: about.qmd
+      - text: posts
+        href: posts.qmd
+      - text: talks
+        href: talks.qmd
+      #- icon: github
+      #  href: https://github.com/EllaKaye
+      #- icon: twitter
+      #  href: https://twitter.com/ellamkaye
+  favicon: images/favicon.png
+  twitter-card: 
+    title: Ella Kaye
+    description: The personal website of Ella Kaye
+    image: images/logo.png
+    image-alt: |
+      A square logo made from Ella Kaye's name - 
+      first name on top of last name in dark gray capital letters, 
+      separated by a horizontal bright pink line, on a very light grey background
+    image-width: 500
+    image-height: 500
+    card-style: summary # alternative summary_large_image
+    creator: "@ellamkaye"
+    site: "@ellamkaye"
+  open-graph: 
+    #description: The personal website of Ella Kaye
+    image-alt: |
+      A square logo made from Ella Kaye's name - 
+      first name on top of last name in dark gray capital letters, 
+      separated by a horizontal bright pink line, on a very light grey background
+    image-width: 500
+    image-height: 500
+    locale: en-GB
+  google-analytics:
+    tracking-id: "G-7G8FLLRS4M"
+    anonymize-ip: true
+
 format:
   html:
-    theme: flatly
-    css: styles.css
+    theme: assets/ek-theme-dark.scss
+    css: assets/ek-styles.css
+    code-block-border-left: true
+    highlight-style: assets/ek-dark.theme
+    smooth-scroll: true
+    link-external-newwindow: true
+    
+editor: source
+
 
 
 

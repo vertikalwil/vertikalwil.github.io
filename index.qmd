@@ -1,14 +1,41 @@
 ---
-title: "."
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
+execute: 
+  echo: false
 page-layout: full
-title-block-banner: true
 ---
+::: {.grid}
 
+::: {.g-col-12}
+[Hello and welcome!]{.home-header}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-first-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">About me, my interests and experience, and my work as a Research Software Engineer.</p>
+<div style="margin-top: auto;"><a href="about.qmd" class="card-link heading-font">ABOUT</a></div>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-second-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">I sometimes write about what I'm doing and learning, mostly about <i class="fa-brands fa-r-project" aria-label="R project"></i> and building websites.</p>
+<div style="margin-top: auto;"><a href="posts.qmd" class="card-link second-color-link heading-font">POSTS</a></div>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-third-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">Slides and resources from talks I've given at R and RLadies user groups and conferences.</p>
+<div style="margin-top: auto;"><a href="talks.qmd" class="card-link third-color-link heading-font">TALKS</a></div>
+</div>
+</div>
+:::
+
+
+:::
 
