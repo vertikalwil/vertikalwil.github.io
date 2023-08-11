@@ -1,8 +1,8 @@
 ---
-title: "About"
-image: profile.jpg
 about:
-  template: jolla
+  template: marquee
+  image-width: 30em
+  image-shape: round
   links:
     - icon: twitter
       text: Twitter
@@ -16,4 +16,16 @@ about:
 
 ---
 
-About this blog
+![](profile.jpg){fig-align="middle" width=350 height=350}
+
+
+
+
+ Hello! Thanks for visiting my website. I'm Vertikal Willis, 25 years old. I'm from Medan and now living in Jakarta. 
+ I've got 5 years of work experience, mostly as a buyer/procurement professional. 
+ I decided to switch careers to data science because I feel it suits me better. 
+ Processing complex data in creative ways to find strong insights and solutions gives me real joy. 
+ I think a data scientist is like an artist, using data in various creative ways to solve problems – it's an art form!
+
+ 
+I also enjoy teaching, that's why you see the tutorial section on the homepage!
