@@ -4,8 +4,7 @@ author: "testtttt"
 date: "2023-08-03"
 categories: [news]
 ---
-
-
+#{{< embed ipynb/final-project.ipynb >}}
 
 
 
