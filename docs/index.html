@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>vertikal</title>
+<title>Vertikal Willis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,15 +30,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./images/logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -59,9 +60,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/ek-styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -72,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">vertikal</span>
+    <span class="navbar-title">VERTIKAL W.<span class="icon-line"></span></span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -83,17 +85,15 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+ <span class="menu-text">about</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
-</i> 
- <span class="menu-text"></span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./posts.html" rel="" target="">
+ <span class="menu-text">portfolios</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com" rel="" target=""><i class="bi bi-twitter" role="img">
-</i> 
- <span class="menu-text"></span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./talks.qmd" rel="" target="">
+ <span class="menu-text">tutorials</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
@@ -114,13 +114,13 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="grid">
 <div class="g-col-12">
-<p><span class="home-header">Hello and welcome!</span></p>
+<p><span class="home-header">Hi! Welcome to my blog!</span></p>
 </div>
 <div class="g-col-12 g-col-md-4">
 <div id="card-first-color" class="card h-100">
 <div class="card-body d-flex flex-column">
 <p class="card-text">
-About me, my interests and experience, and my work as a Research Software Engineer.
+Everything you need to know about me.
 </p>
 <div style="margin-top: auto;">
 <a href="./about.html" class="card-link heading-font">ABOUT</a>
@@ -132,10 +132,10 @@ About me, my interests and experience, and my work as a Research Software Engine
 <div id="card-second-color" class="card h-100">
 <div class="card-body d-flex flex-column">
 <p class="card-text">
-I sometimes write about what I’m doing and learning, mostly about <i class="fa-brands fa-r-project" aria-label="R project"></i> and building websites.
+All of my data science projects and portfolios.
 </p>
 <div style="margin-top: auto;">
-<a href="posts.qmd" class="card-link second-color-link heading-font">POSTS</a>
+<a href="./posts.html" class="card-link second-color-link heading-font">PORTFOLIOS</a>
 </div>
 </div>
 </div>
@@ -144,46 +144,10 @@ I sometimes write about what I’m doing and learning, mostly about <i class="fa
 <div id="card-third-color" class="card h-100">
 <div class="card-body d-flex flex-column">
 <p class="card-text">
-Slides and resources from talks I’ve given at R and RLadies user groups and conferences.
+Tutorials about things related to data science and data analysis (coming soon).
 </p>
 <div style="margin-top: auto;">
-<a href="talks.qmd" class="card-link third-color-link heading-font">TALKS</a>
-</div>
-</div>
-</div>
-</div>
-<div class="g-col-12 g-col-md-4">
-<div id="card-second-color" class="card h-100">
-<div class="card-body d-flex flex-column">
-<p class="card-text">
-I develop R packages. Here are links to their repos, websites and any other resources.
-</p>
-<div style="margin-top: auto;">
-<a href="packages.qmd" class="card-link second-color-link heading-font">PACKAGES</a>
-</div>
-</div>
-</div>
-</div>
-<div class="g-col-12 g-col-md-4">
-<div id="card-third-color" class="card h-100">
-<div class="card-body d-flex flex-column">
-<p class="card-text">
-I love the R community! Here’s how to get involved, and groups I help organise or contribute to.
-</p>
-<div style="margin-top: auto;">
-<a href="community.qmd" class="card-link third-color-link heading-font">COMMUNITY</a>
-</div>
-</div>
-</div>
-</div>
-<div class="g-col-12 g-col-md-4">
-<div id="card-first-color" class="card h-100">
-<div class="card-body d-flex flex-column">
-<p class="card-text">
-Where to find me online and how to get in touch. I’d love to hear from you!
-</p>
-<div style="margin-top: auto;">
-<a href="contact.qmd" class="card-link heading-font">CONTACT</a>
+<a class="card-link third-color-link heading-font">TUTORIALS</a>
 </div>
 </div>
 </div>
@@ -424,10 +388,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/vertikalwil\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
