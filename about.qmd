@@ -3,63 +3,83 @@ about:
   template: marquee
   image-width: 30em
   image-shape: round
-  links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
-    - icon: github
-      text: Github
-      href: https://github.com
 
 ---
 
-![](profile.jpg){fig-align="middle" width=350 height=350}
+![](images/selfie.png){fig-align="middle" width=300 height=375}
 
 
 
 
- Hello! Thanks for visiting my website. I'm Vertikal Willis, 25 years old. I'm from Medan and now living in Jakarta. 
+ Hello! Thanks for visiting my website. I'm Vertikal Willis, 25 years old, and single. I'm from Medan and now living in Jakarta. 
  I've got total 5 years of work experience, mostly as a buyer/procurement professional. 
  I decided to switch careers to data science because I feel it suits me better. 
  Processing complex data in creative ways to find strong insights and solutions gives me real joy. 
  I think a data scientist is like an artist, be able to make something out of nothing by using data – it's an art form!
 
- 
-I also enjoy teaching, that's why you see the tutorial section on the homepage! <br>
+ To see my complete CV please email to vertikalwillis@gmail.com or contact me through [LinkedIn!](https://linkedin.com){target="_blank"}
+
 
 ### Education
 ***
-**Universitas Prima Indonesia** <img src="images/logo-unpri.png" alt="Logo" style="width: 20px; height: 20px;"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 2016 - 2020
-Industrial Engineering <br>
--. GPA : 3.68 / 4
-
 **Dibimbing DS Bootcamp** <img src="images/logo-dibimbing.png" alt="Logo" style="width: 20px; height: 20px;"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 2023 <br> 
 Data Science Batch 19 <br>
 -. Most valuable person <br>
--. Best of final project <br>
+-. 2nd best of final project <br>
 -. 3 x student of the month <br>
+
+**Universitas Prima Indonesia** <img src="images/logo-unpri.png" alt="Logo" style="width: 20px; height: 20px;"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 2016 - 2020
+Bachelor's degree in industrial engineering<br>
+-. GPA : 3.68 / 4
 
 ### Certificates
 ***
+**Dibimbing DS** <br>
+Report Card <br>
+MVP <br>
+Completion
+
 **HackerRank SQL** <br>
 [Advanced SQL queries](https://www.hackerrank.com/certificates/08857914b51f){target="_blank"} <Br>
 
 ### Skills
 ***
-
-
 <div class="skill">
-<span class="skill-label">HTML</span>
+<span class="skill-label">Python <img src="images/logo-python.png" alt="Logo" style="width: 20px; height: 20px;"> </span>
 <div class="progress-bar">
-<div class="progress" style="width: 70%;">70%</div>
+<div class="progress" style="width: 80%; background-color: #3498db;"></div>
+</div>
 </div>
 
-    
+<div class="skill">
+<span class="skill-label">SQL <img src="images/logo-sql.png" alt="Logo" style="width: 20px; height: 20px;"> </span>
+<div class="progress-bar">
+<div class="progress" style="width: 82%; background-color: #FFA500;" ></div>
+</div>
+</div>
 
+<div class="skill">
+<span class="skill-label">Power BI <img src="images/logo-pbi.png" alt="Logo" style="width: 20px; height: 20px;"> </span>
+<div class="progress-bar">
+<div class="progress" style="width: 84%; background-color: #00FFFF;" ></div>
+</div>
+</div>
 
+<div class="skill">
+<span class="skill-label">Tableau <img src="images/logo-tableau.png" alt="Logo" style="width: 20px; height: 20px;"> </span>
+<div class="progress-bar">
+<div class="progress" style="width: 80%; background-color: #00008B;" ></div>
+</div>
+</div>  
+
+<div class="skill">
+<span class="skill-label">Excel VBA <img src="images/logo-excel.png" alt="Logo" style="width: 20px; height: 20px;"> </span>
+<div class="progress-bar">
+<div class="progress" style="width: 84%; background-color: #008000;" ></div>
+</div>
+</div>  
+
+   
 <style>
 .skills {
     margin-top: 20px;
@@ -72,24 +92,197 @@ Data Science Batch 19 <br>
 }
 
 .skill-label {
-    width: 100px;
+    width: 120px;
     font-weight: bold;
 }
 
 .progress-bar {
+    max-width: 300px;
     flex: 1;
-    height: 20px;
+    height: 15px;
     background-color: #f2f2f2;
     border-radius: 5px;
     position: relative;
+    
 }
 
 .progress {
     height: 100%;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #f39c12;
 }
 </style>
+
+### Tools
+***
+<html>
+<head>
+<style>
+.container {
+display: inline-block;
+text-align: left;
+display: inline;
+flex-wrap: wrap-reverse;
+}
+
+.item {
+display: inline-block;
+margin: 0px;
+}
+
+.item img {
+vertical-align: left;
+margin-right: 0px;
+}
+
+.item p {
+display: inline-block;
+margin: 0 0 0 0px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="item">
+<a>
+<img src="images/logo-pandas.png" alt="Image 1" style="width: 100px; height: 50px;">
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a>
+<img src="images/logo-plt.png" alt="Image 1" style="width: 100px; height: 50px;">
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a>
+<img src="images/logo-seaborn.png" alt="Image 1" style="width: 100px; height: 50px;">
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a>
+<img src="images/logo-numpy.png" alt="Image 1" style="width: 100px; height: 50px;">
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a>
+<img src="images/logo-sk.png" alt="Image 1" style="width: 100px; height: 50px;">
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a>
+<img src="images/logo-dax.png" alt="Image 1" style="width: 100px; height: 50px;">
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a>
+<img src="images/logo-html.png" alt="Image 1" style="width: 100px; height: 50px;">
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a>
+<img src="images/logo-quarto.png" alt="Image 1" style="width: 100px; height: 50px;">
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a>
+<img src="images/logo-git.png" alt="Image 1" style="width: 100px; height: 50px;">
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a>
+<img src="images/logo-jupyter.png" alt="Image 1" style="width: 100px; height: 50px;">
+</a>
+</div>
+
+</body>
+</html>
+
+### Find me
+***
+<html>
+<head>
+<style>
+.container {
+text-align: left;
+display: inline;
+flex-wrap: wrap-reverse;
+}
+
+.item {
+display: inline-block;
+margin: 5px;
+}
+
+.item img {
+vertical-align: left;
+margin-right: 10px;
+}
+
+.item p {
+display: inline-block;
+margin: 0 0 0 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="item">
+<a href="mailto:vertikalwillis@gmail.com">
+<img src="images/logo-email.png" alt="Image 1" style="width: 40px; height: 40px;">Email
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a href="https://linkedin.com">
+<img src="images/logo-linkedin.png" alt="Image 1" style="width: 40px; height: 40px;">LinkedIn
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a href="https://github.com/vertikalwil">
+<img src="images/logo-github.png" alt="Image 1" style="width: 40px; height: 40px;">GitHub
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a href="https://www.hackerrank.com/vertikalwillis">
+<img src="images/logo-hacker.png" alt="Image 1" style="width: 40px; height: 40px;">HackerRank
+</a>
+</div>
+
+<div class="container">
+<div class="item">
+<a href="https://10fastfingers.com/user/868292/">
+<img src="images/logo-10ff.png" alt="Image 1" style="width: 40px; height: 40px;">10FastFingers
+</a>
+</div>
+
+</body>
+</html>
+
 
 
 
