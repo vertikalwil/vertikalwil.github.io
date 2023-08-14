@@ -1,0 +1,11 @@
+{
+  "hash": "dfdec6a1848aeb1b5799d79aa8ab1cbb",
+  "result": {
+    "markdown": "---\ntitle: \"blog ketiga\"\nauthor: \"testtttt\"\nengine: jupyter\ndate: \"2023-08-03\"\ncategories: [news]\n---\n\n#{{< embed ipynb/final-project.ipynb >}}\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

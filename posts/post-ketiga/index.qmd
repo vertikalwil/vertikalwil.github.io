@@ -1,10 +1,17 @@
 ---
-title: "blog ketiga"
-author: "testtttt"
+title: "Telco customer churn"
+image: ../../images/telco-thumbnail.png
+author: "vertikal"
 date: "2023-08-03"
-categories: [news]
+description: How I deeply process telco customer churn dataset
+categories: [classification,machine-learning,data-science]
 ---
-#{{< embed ipynb/final-project.ipynb >}}
+On this occasion, I would like to discuss one of my projects that involves the telco customer churn dataset. Who doesn't know about telco customer churn? This dataset is exceedingly common, and I'm confident that every data science practitioner has worked with it at some point. So, why am I still using this dataset? It's because I want to demonstrate a different and more detailed approach to its processing. Here, I will conduct a deeper Exploratory Data Analysis (EDA) and showcase how to create and fine-tune a machine learning model to align it with the intended business objectives, followed by interpreting the results.
+
+Of course, the goals of this project are to produce actionable insights and the most suitable predictive model aligned with the existing business concepts.
+
+
+
 
 
 

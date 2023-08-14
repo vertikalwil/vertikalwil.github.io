@@ -1,0 +1,11 @@
+{
+  "hash": "954556ba9621d780a056e26bd0d22f3a",
+  "result": {
+    "markdown": "---\n#title: \"posts\"\nengine : jupyter\nlisting:\n  contents: posts\n  sort: \"date desc\"\n  type: default\n  categories: true\n  sort-ui: false\n  filter-ui: false\npage-layout: full\ntitle-block-banner: false\nexecute: \n  echo: false\n---\n\n",
+    "supporting": [
+      "posts_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
