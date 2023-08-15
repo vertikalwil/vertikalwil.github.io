@@ -64,12 +64,16 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 
 
 <link rel="stylesheet" href="../../assets/ek-styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -147,17 +151,200 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="../../ipynb/final-project.ipynb.html"><i class="bi bi-journal-code"></i>final-project.ipynb</a></li></ul></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<p>On this occasion, I would like to discuss one of my projects that involves the telco customer churn dataset. Who doesn’t know about telco customer churn? This dataset is exceedingly common, and I’m confident that every data science practitioner has worked with it at some point. So, why am I still using this dataset? It’s because I want to demonstrate a different and more detailed approach to its processing. Here, I will conduct a deeper Exploratory Data Analysis (EDA) and showcase how to create and fine-tune a machine learning model to align it with the intended business objectives, followed by interpreting the results.</p>
-<p>Of course, the goals of this project are to produce actionable insights and the most suitable predictive model aligned with the existing business concepts.</p>
+<p>On this occasion, I would like to discuss one of my projects that involves the telco customer churn dataset. Who doesn’t know about telco customer churn? This dataset is exceedingly common, and I’m confident that every data science practitioner has worked with it at some point. So, why am I still using this dataset? It’s because I want to demonstrate a different and more detailed approach on how to process it. Here, I will conduct a deeper Exploratory Data Analysis (EDA) and showcase how to create and fine-tune a machine learning model to align it with the intended business objectives, followed by interpreting the results.</p>
+<p>Of course, the goals of this project are to produce actionable insights and the most suitable predictive model aligned with the existing business concepts. I will show step by step on how to do the projects so this will be very technical, but If you only want to see the big picture, I am also preparing the link for the presentation.</p>
+<hr>
+<section id="data-introduction" class="level3">
+<h3 class="anchored" data-anchor-id="data-introduction">Data Introduction <br></h3>
+<div style="font-size: 90%;">
+<div class="quarto-embed-nb-cell">
+<blockquote class="blockquote">
+<p>Columns info : <br> 1.customerID = customer unique ID.<br> 2.gender = customer gender (M/F).<br> 3.SeniorCitizen = old / young customer.<br> 4.Partner = either a customer has partners or not.<br> 5.Dependents = either a customer has dependents or not.<br> 6.tenure = how long the customer subscribed (in month).<br> 7.MultipleLines = either a customer using multiple lines or not (phone lines).<br> 8.InternetService = either a customer using InternetService lines or not.<br> 9.OnlineSecurity = either a customer has OnlineSecurity or not.<br> 10.OnlineBackup = either a customer has OnlineBackup or not.<br> 11.DeviceProtection = either a customer has DeviceProtection or not.<br> 12.TechSupport = either a customer has TechSupport or not.<br> 13.StreamingTV = either a customer has StreamingTV or not.<br> 14.StreamingMovies = either a customer has StreamingMovie or not.<br> 15.Contract = types of contract.<br> 16.PaperlessBilling = either a customer has PaperlessBilling or not.<br> 17.PaymentMethod = types of the payment method.<br> 18.MonthlyCharges = how much charges per month.<br> 19.TotalCharges = total charges of all time.<br> 20.Churn = either a customer churn or not.<br> 21.Hobby = customer hobby.<br><br></p>
+</blockquote>
+<a class="quarto-notebook-link" id="nblink-1" href="../../ipynb/final-project.ipynb.html">Source: final-project.ipynb</a></div>
+</div>
+<p>Columns from 9 to 14 are actually benefits that customers can choose to take.</p>
+<hr>
+</section>
+<section id="data-preparation" class="level3">
+<h3 class="anchored" data-anchor-id="data-preparation">Data Preparation</h3>
+<hr>
+<div style="font-size: 90%;">
+<div class="quarto-embed-nb-cell">
+<div class="cell" data-editable="true" data-executioninfo="{&quot;elapsed&quot;:24,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1679644359104,&quot;user&quot;:{&quot;displayName&quot;:&quot;vertikal willis&quot;,&quot;userId&quot;:&quot;09422096490593763616&quot;},&quot;user_tz&quot;:-420}" data-outputid="2366b164-8324-46c7-b7df-c285928418ef" data-scrolled="true" data-slideshow="{&quot;slide_type&quot;:&quot;&quot;}" data-tags="[&quot;tabel&quot;]" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
 
 
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">customerID</th>
+<th data-quarto-table-cell-role="th">gender</th>
+<th data-quarto-table-cell-role="th">SeniorCitizen</th>
+<th data-quarto-table-cell-role="th">Partner</th>
+<th data-quarto-table-cell-role="th">Dependents</th>
+<th data-quarto-table-cell-role="th">tenure</th>
+<th data-quarto-table-cell-role="th">PhoneService</th>
+<th data-quarto-table-cell-role="th">MultipleLines</th>
+<th data-quarto-table-cell-role="th">InternetService</th>
+<th data-quarto-table-cell-role="th">OnlineSecurity</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">TechSupport</th>
+<th data-quarto-table-cell-role="th">StreamingTV</th>
+<th data-quarto-table-cell-role="th">StreamingMovies</th>
+<th data-quarto-table-cell-role="th">Contract</th>
+<th data-quarto-table-cell-role="th">PaperlessBilling</th>
+<th data-quarto-table-cell-role="th">PaymentMethod</th>
+<th data-quarto-table-cell-role="th">MonthlyCharges</th>
+<th data-quarto-table-cell-role="th">TotalCharges</th>
+<th data-quarto-table-cell-role="th">Churn</th>
+<th data-quarto-table-cell-role="th">Hobby</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>7590-VHVEG</td>
+<td>Female</td>
+<td>0</td>
+<td>Yes</td>
+<td>No</td>
+<td>135</td>
+<td>No</td>
+<td>No phone service</td>
+<td>DSL</td>
+<td>No</td>
+<td>...</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Month-to-month</td>
+<td>Yes</td>
+<td>Electronic check</td>
+<td>29.85</td>
+<td>29.85</td>
+<td>No</td>
+<td>Swimming</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>5575-GNVDE</td>
+<td>Male</td>
+<td>0</td>
+<td>No</td>
+<td>No</td>
+<td>34</td>
+<td>Yes</td>
+<td>No</td>
+<td>DSL</td>
+<td>Yes</td>
+<td>...</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>One year</td>
+<td>No</td>
+<td>Mailed check</td>
+<td>56.95</td>
+<td>1889.5</td>
+<td>No</td>
+<td>Running</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3668-QPYBK</td>
+<td>Male</td>
+<td>0</td>
+<td>No</td>
+<td>No</td>
+<td>140</td>
+<td>Yes</td>
+<td>No</td>
+<td>DSL</td>
+<td>Yes</td>
+<td>...</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Month-to-month</td>
+<td>Yes</td>
+<td>Mailed check</td>
+<td>53.85</td>
+<td>7560</td>
+<td>Yes</td>
+<td>Hiking</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>7795-CFOCW</td>
+<td>Male</td>
+<td>0</td>
+<td>No</td>
+<td>No</td>
+<td>136</td>
+<td>No</td>
+<td>No phone service</td>
+<td>DSL</td>
+<td>Yes</td>
+<td>...</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>One year</td>
+<td>No</td>
+<td>Bank transfer (automatic)</td>
+<td>42.45</td>
+<td>1840.75</td>
+<td>No</td>
+<td>Swimming</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>9237-HQITU</td>
+<td>Female</td>
+<td>0</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>Yes</td>
+<td>No</td>
+<td>Fiber optic</td>
+<td>No</td>
+<td>...</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Month-to-month</td>
+<td>Yes</td>
+<td>Electronic check</td>
+<td>70.70</td>
+<td>151.65</td>
+<td>Yes</td>
+<td>Running</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 22 columns</p>
+</div>
+</div>
+</div>
+<a class="quarto-notebook-link" id="nblink-2" href="../../ipynb/final-project.ipynb.html">Source: final-project.ipynb</a></div>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

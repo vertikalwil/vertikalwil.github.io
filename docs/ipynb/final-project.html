@@ -175,12 +175,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>This project is a final project created as one of the requirements to pass the Dibimbing Data Science Bootcamp. The dataset I used is the telco customer churn dataset, which is popular and commonly used for practice. I chose this dataset because it has numerous columns and it represents a ‘real-life’ dataset from an actual telco company. The problem faced by the company is customer churn, which results in financial loss. The solution involves providing prospects and promotions to potential churned customers, but this action also incurs costs for the company. Therefore, accurately targeting the churned customers is crucial. Based on this problem, I set two main goals:<br><br> 1.Look for useful information, insights, and patterns by performing exploratory data analysis.<br> 2.Create an ML model that best fits the company’s goal of reducing losses.</p>
 </blockquote>
-</section>
-<section id="data-introduction" class="level1">
-<h1>Data Introduction</h1>
-<hr>
 <blockquote class="blockquote">
-<p>This dataset contain informations about customers that churn and not churned in a telco company. Below is the column informations:<br> 1.customerID = customer unique ID.<br> 2.gender = customer gender (M/F).<br> 3.SeniorCitizen = old / young customer.<br> 4.Partner = either a customer has partners or not.<br> 5.Dependents = either a customer has dependents or not.<br> 6.tenure = how long the customer subscribed (in month).<br> 7.MultipleLines = either a customer using multiple lines or not (phone lines).<br> 8.InternetService = either a customer using InternetService lines or not.<br> 9.OnlineSecurity = either a customer has OnlineSecurity or not.<br> 10.OnlineBackup = either a customer has OnlineBackup or not.<br> 11.DeviceProtection = either a customer has DeviceProtection or not.<br> 12.TechSupport = either a customer has TechSupport or not.<br> 13.StreamingTV = either a customer has StreamingTV or not.<br> 14.StreamingMovies = either a customer has StreamingMovie or not.<br> 15.Contract = types of contract.<br> 16.PaperlessBilling = either a customer has PaperlessBilling or not.<br> 17.PaymentMethod = types of the payment method.<br> 18.MonthlyCharges = how much charges per month.<br> 19.TotalCharges = total charges of all time.<br> 20.Churn = either a customer churn or not.<br> 21.Hobby = customer hobby.<br><br></p>
+<p>Columns info : <br> 1.customerID = customer unique ID.<br> 2.gender = customer gender (M/F).<br> 3.SeniorCitizen = old / young customer.<br> 4.Partner = either a customer has partners or not.<br> 5.Dependents = either a customer has dependents or not.<br> 6.tenure = how long the customer subscribed (in month).<br> 7.MultipleLines = either a customer using multiple lines or not (phone lines).<br> 8.InternetService = either a customer using InternetService lines or not.<br> 9.OnlineSecurity = either a customer has OnlineSecurity or not.<br> 10.OnlineBackup = either a customer has OnlineBackup or not.<br> 11.DeviceProtection = either a customer has DeviceProtection or not.<br> 12.TechSupport = either a customer has TechSupport or not.<br> 13.StreamingTV = either a customer has StreamingTV or not.<br> 14.StreamingMovies = either a customer has StreamingMovie or not.<br> 15.Contract = types of contract.<br> 16.PaperlessBilling = either a customer has PaperlessBilling or not.<br> 17.PaymentMethod = types of the payment method.<br> 18.MonthlyCharges = how much charges per month.<br> 19.TotalCharges = total charges of all time.<br> 20.Churn = either a customer churn or not.<br> 21.Hobby = customer hobby.<br><br></p>
 </blockquote>
 <section id="data-preparation-import-libraries-data-cleaning-data-wrangling" class="level2">
 <h2 class="anchored" data-anchor-id="data-preparation-import-libraries-data-cleaning-data-wrangling">Data Preparation (Import libraries, data cleaning &amp; data wrangling)</h2>
@@ -205,11 +201,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>mpl.rcParams[<span class="st">'figure.dpi'</span>] <span class="op">=</span> <span class="dv">300</span> <span class="co">#set figure dpi</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>() <span class="co">#set figure styling</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="2">
+<div class="cell" data-editable="true" data-slideshow="{&quot;slide_type&quot;:&quot;&quot;}" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#dataset link</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>github <span class="op">=</span> <span class="st">'https://raw.githubusercontent.com/vertikalwil/Data-Analyst/main/telco.csv'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:24,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1679644359104,&quot;user&quot;:{&quot;displayName&quot;:&quot;vertikal willis&quot;,&quot;userId&quot;:&quot;09422096490593763616&quot;},&quot;user_tz&quot;:-420}" data-outputid="2366b164-8324-46c7-b7df-c285928418ef" data-execution_count="3">
+<div class="cell" data-editable="true" data-executioninfo="{&quot;elapsed&quot;:24,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1679644359104,&quot;user&quot;:{&quot;displayName&quot;:&quot;vertikal willis&quot;,&quot;userId&quot;:&quot;09422096490593763616&quot;},&quot;user_tz&quot;:-420}" data-outputid="2366b164-8324-46c7-b7df-c285928418ef" data-scrolled="true" data-slideshow="{&quot;slide_type&quot;:&quot;&quot;}" data-tags="[&quot;tabel&quot;]" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#import dataset</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'telco.csv'</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -372,7 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:23,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1679644359105,&quot;user&quot;:{&quot;displayName&quot;:&quot;vertikal willis&quot;,&quot;userId&quot;:&quot;09422096490593763616&quot;},&quot;user_tz&quot;:-420}" data-outputid="3767453b-34e8-4162-c1ae-4b31e4af10ad" data-execution_count="4">
+<div class="cell" data-editable="true" data-executioninfo="{&quot;elapsed&quot;:23,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1679644359105,&quot;user&quot;:{&quot;displayName&quot;:&quot;vertikal willis&quot;,&quot;userId&quot;:&quot;09422096490593763616&quot;},&quot;user_tz&quot;:-420}" data-outputid="3767453b-34e8-4162-c1ae-4b31e4af10ad" data-slideshow="{&quot;slide_type&quot;:&quot;&quot;}" data-tags="[&quot;dfinfo&quot;]" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#take a look at the dataframe</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -410,7 +406,7 @@ memory usage: 1.2+ MB</code></pre>
 <blockquote class="blockquote">
 <p>There are 4 columns with missing values which are DeviceProtection, Contract, TotalCharges and Hobby.</p>
 </blockquote>
-<div class="cell" data-execution_count="5">
+<div class="cell" data-editable="true" data-slideshow="{&quot;slide_type&quot;:&quot;&quot;}" data-tags="[]" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#checking percentage of missing values</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>missingkolom <span class="op">=</span> [<span class="st">'DeviceProtection'</span>,<span class="st">'Contract'</span>,<span class="st">'TotalCharges'</span>,<span class="st">'Hobby'</span>]</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> missingkolom:</span>
@@ -946,7 +942,7 @@ Categorical = ['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'PhoneService
 <blockquote class="blockquote">
 <p>1.Male and Female has the same proportion.<br> 2.Most of customers is non SeniorCitizen with no Partner and No Dependents.<br> 3.Favorite InternetService is Fiber optic.<br> 4.Majority of customers is subscribed with ‘Month-to-month’ Contract.<br> 5.5155 out of 7012 is non-Churn customers which make this dataset is imbalanced.<br> 6.All these columns have low cardiality values.</p>
 </blockquote>
-<div class="cell" data-execution_count="25">
+<div class="cell" data-editable="true" data-slideshow="{&quot;slide_type&quot;:&quot;&quot;}" data-tags="[]" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> dfcat.columns:</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Value counts for column </span><span class="sc">{</span>col<span class="sc">}</span><span class="ss">:'</span>)</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df[col].value_counts())</span>
@@ -1099,7 +1095,7 @@ Name: Services, dtype: int64
 </section>
 <section id="univariate-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="univariate-analysis">Univariate Analysis</h3>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:4816,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1679644363913,&quot;user&quot;:{&quot;displayName&quot;:&quot;vertikal willis&quot;,&quot;userId&quot;:&quot;09422096490593763616&quot;},&quot;user_tz&quot;:-420}" data-outputid="170c154e-b2f7-4f3c-8eaa-b7dba683bd5c" data-execution_count="26">
+<div class="cell" data-editable="true" data-executioninfo="{&quot;elapsed&quot;:4816,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1679644363913,&quot;user&quot;:{&quot;displayName&quot;:&quot;vertikal willis&quot;,&quot;userId&quot;:&quot;09422096490593763616&quot;},&quot;user_tz&quot;:-420}" data-outputid="170c154e-b2f7-4f3c-8eaa-b7dba683bd5c" data-slideshow="{&quot;slide_type&quot;:&quot;&quot;}" data-tags="[&quot;test&quot;]" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>fig, axarr <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">4</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>))</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> dfnum.columns:</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    axarr[dfnum.columns.get_loc(x)].boxplot(df[x],patch_artist<span class="op">=</span><span class="va">True</span>)</span>
