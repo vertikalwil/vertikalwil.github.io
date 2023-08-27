@@ -21,7 +21,8 @@ On this occasion, I would like to discuss one of my projects that involves the t
 Of course, the goals of this project are to produce actionable insights and the most suitable predictive model aligned with the existing business concepts.
 On this particular blog post, I will show detailed step by step on how to do the projects (including the codes) so this will be very technical, but if you just want to see the big picture you can visit this link:
 
-Presentation link : [Click here](https://docs.google.com/presentation/d/e/2PACX-1vR0dOy0icSQtH47y4pXOvki-xwIL4wtljaLZkL_NXMp5fN2sBzJlLuYRaGY5SWqew/pub?start=true&loop=false&delayms=60000)
+Presentation link : [Click here](https://docs.google.com/presentation/d/e/2PACX-1vR0dOy0icSQtH47y4pXOvki-xwIL4wtljaLZkL_NXMp5fN2sBzJlLuYRaGY5SWqew/pub?start=true&loop=false&delayms=60000) <Br>
+App deployment link : [shinyapps.io](https://vertikalwil.shinyapps.io/telco_app/)
 
 ::: {style="font-size: 90%;"}
 {{< embed ../../ipynb/final-project.ipynb echo=true >}}
