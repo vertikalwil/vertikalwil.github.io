@@ -23,6 +23,7 @@ website:
       - text: portfolios
         href: posts.qmd
       - text: tutorials
+        href: tutorial.qmd
       #- icon: github
       #  href: https://github.com/EllaKaye
       #- icon: twitter
