@@ -1,287 +1,334 @@
 ---
 about:
   template: marquee
-  image-width: 30em
-  image-shape: round
+
 
 ---
 
-![](images/selfie.png){fig-align="middle" width=300 height=375}
+
+<link rel="stylesheet" href="assets/styles.css"> 
 
 
-
+<div class="circular-image">
+  <img src="images/selfie.png" alt="Circular Image">
+</div>
 
  Hello! Thanks for visiting my website. I'm Vertikal Willis, 25 years old, and single. I'm from Medan and now living in Jakarta. 
- I've got total 5 years of work experience, mostly as a buyer/procurement professional. 
+ I've got total 5 years of work experience (I've been working since my first semester of college), mostly as a buyer/procurement professional. 
  I decided to switch careers to data science because I feel it suits me better. 
  Processing complex data in creative ways to find strong insights and solutions gives me real joy. 
  I think a data scientist is like an artist, be able to make something out of nothing by using data – it's an art form!
 
  To see my complete CV please email to vertikalwillis@gmail.com or contact me through [LinkedIn!](https://linkedin.com){target="_blank"}
 
+### Find me
+***
+<div style="display: flex;">
+
+  <div class="inner-div">
+  <a href="mailto:vertikalwillis@gmail.com">
+  <p><img src="images/logo-email.png" alt="Logo" style="width: 30px; height: 30px;"> Email</p>
+  </a>
+  </div>
+
+  <div class="inner-div">
+  <a href="https://linkedin.com">
+  <p><img src="images/logo-linkedin.png" alt="Logo" style="width: 30px; height: 30px;"> LinkedIn</p>
+  </a>
+  </div>
+
+  <div class="inner-div">
+  <a href="https://github.com/vertikalwil">
+  <p><img src="images/logo-github.png" alt="Logo" style="width: 30px; height: 30px;"> GitHub</p>
+  </a>
+  </div>
+
+  <div class="inner-div">
+  <a href="https://www.instagram.com/vertikall11/">
+  <p><img src="images/logo-instagram.png" alt="Logo" style="width: 30px; height: 30px;"> Instagram</p>
+  </a>
+  </div>
+
+</div>
 
 ### Education
 ***
-**Dibimbing DS Bootcamp** <img src="images/logo-dibimbing.png" alt="Logo" style="width: 20px; height: 20px;"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 2023 <br> 
-Data Science Batch 19 <br>
--. Most valuable person <br>
--. 2nd best of final project <br>
--. 3 x student of the month <br>
+<div class="text-container">
+  <p>**Dibimbing DS Bootcamp** <img src="images/logo-dibimbing.png" alt="Logo" style="width: 20px; height: 20px;"></p>
+  <p class="text-right">2023</p>
+</div>
+DS Batch 19
+<div style="margin-left: -20px;">
+* Most valuable person 
+* 2nd best of final project 
+* 3 x student of the month 
+</div>
 
-**Universitas Prima Indonesia** <img src="images/logo-unpri.png" alt="Logo" style="width: 20px; height: 20px;"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 2016 - 2020
-Bachelor's degree in industrial engineering<br>
--. GPA : 3.68 / 4
+<div class="text-container">
+  <p>**Universitas Prima Indonesia** <img src="images/logo-unpri.png" alt="Logo" style="width: 20px; height: 20px;"></p>
+  <p class="text-right">2016-2020</p>
+</div>
+Bachelor's degree in Industrial Engineering <br>
+<div style="margin-left: -20px;">
+* GPA : 3.68 / 4
+</div>
 
 ### Certificates
 ***
 **Dibimbing DS** <br>
-Report Card <br>
-MVP <br>
-Completion
+[MVP](https://drive.google.com/file/d/1necxSthh6V9SvF4I_dBycL7YHHoim9zY/view?usp=sharing){target="_blank"} <Br>
+[Report Card](https://drive.google.com/file/d/1WU1l8XoliIbrvVodzaBOyvDrkYSRRZ3b/view?usp=sharing){target="_blank"} <Br>
+[Completion](https://drive.google.com/file/d/1DYm-OVbU5qblfCCvZm7S8gkZ_CM1D329/view?usp=sharing){target="_blank"} <Br>
 
 **HackerRank SQL** <br>
 [Advanced SQL queries](https://www.hackerrank.com/certificates/08857914b51f){target="_blank"} <Br>
 
 ### Skills
 ***
-<div class="skill">
-<span class="skill-label">Python <img src="images/logo-python.png" alt="Logo" style="width: 20px; height: 20px;"> </span>
-<div class="progress-bar">
-<div class="progress" style="width: 80%; background-color: #3498db;"></div>
-</div>
-</div>
+<div style="display: flex; margin-bottom:12px;">
 
-<div class="skill">
-<span class="skill-label">SQL <img src="images/logo-sql.png" alt="Logo" style="width: 20px; height: 20px;"> </span>
-<div class="progress-bar">
-<div class="progress" style="width: 82%; background-color: #FFA500;" ></div>
-</div>
+<div class="inner-div">
+ <div class="progress-container">
+  <div>Python</div>
+  <div class="progress-bar">
+   <div class="fill" style="width: 82%;"><div class="percentage">82%</div></div>
+  </div>
+ </div>
 </div>
 
-<div class="skill">
-<span class="skill-label">Power BI <img src="images/logo-pbi.png" alt="Logo" style="width: 20px; height: 20px;"> </span>
-<div class="progress-bar">
-<div class="progress" style="width: 84%; background-color: #00FFFF;" ></div>
+<div class="inner-div">
+ <div class="progress-container">
+  <div>SQL</div>
+  <div class="progress-bar">
+   <div class="fill" style="width: 78%;"><div class="percentage">78%</div></div>
+  </div>
+ </div>
 </div>
+
 </div>
 
-<div class="skill">
-<span class="skill-label">Tableau <img src="images/logo-tableau.png" alt="Logo" style="width: 20px; height: 20px;"> </span>
-<div class="progress-bar">
-<div class="progress" style="width: 80%; background-color: #00008B;" ></div>
+<div style="display: flex; margin-bottom:12px;">
+
+<div class="inner-div">
+ <div class="progress-container">
+  <div>Power BI (DAX) </div>
+  <div class="progress-bar">
+   <div class="fill" style="width: 79%;"><div class="percentage">79%</div></div>
+  </div>
+ </div>
 </div>
-</div>  
 
-<div class="skill">
-<span class="skill-label">Excel VBA <img src="images/logo-excel.png" alt="Logo" style="width: 20px; height: 20px;"> </span>
-<div class="progress-bar">
-<div class="progress" style="width: 84%; background-color: #008000;" ></div>
+<div class="inner-div">
+ <div class="progress-container">
+  <div>Excel VBA (Macro)</div>
+  <div class="progress-bar">
+   <div class="fill" style="width: 73%;"><div class="percentage">73%</div></div>
+  </div>
+ </div>
 </div>
-</div>  
 
-   
-<style>
-.skills {
-    margin-top: 20px;
-}
+</div>
 
-.skill {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
+<div style="display: flex;">
 
-.skill-label {
-    width: 120px;
-    font-weight: bold;
-}
+<div class="inner-div">
+ <div class="progress-container">
+  <div>Tableau</div>
+  <div class="progress-bar">
+   <div class="fill" style="width: 75%;"><div class="percentage">75%</div></div>
+  </div>
+ </div>
+</div>
 
-.progress-bar {
-    max-width: 300px;
-    flex: 1;
-    height: 15px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    position: relative;
-    
-}
+<div class="inner-div">
+ <div class="progress-container">
+  <div>Googling & ChatGPT</div>
+  <div class="progress-bar">
+   <div class="fill" style="width: 83%;"><div class="percentage">83%</div></div>
+  </div>
+ </div>
+</div>
 
-.progress {
-    height: 100%;
-    border-radius: 5px;
-    background-color: #f39c12;
-}
-</style>
+</div>
 
 ### Tools
 ***
-<html>
-<head>
-<style>
-.container {
-display: inline-block;
-text-align: left;
-display: inline;
-flex-wrap: wrap-reverse;
-}
 
-.item {
-display: inline-block;
-margin: 0px;
-}
+<div style="display: flex; margin-bottom:20px; ">
 
-.item img {
-vertical-align: left;
-margin-right: 0px;
-}
-
-.item p {
-display: inline-block;
-margin: 0 0 0 0px;
-}
-</style>
-</head>
-<body>
-
-<div class="container">
-<div class="item">
-<a>
+<div class="inner-div">
 <img src="images/logo-pandas.png" alt="Image 1" style="width: 100px; height: 50px;">
-</a>
 </div>
 
-<div class="container">
-<div class="item">
-<a>
+<div class="inner-div">
 <img src="images/logo-plt.png" alt="Image 1" style="width: 100px; height: 50px;">
-</a>
 </div>
 
-<div class="container">
-<div class="item">
-<a>
+<div class="inner-div">
 <img src="images/logo-seaborn.png" alt="Image 1" style="width: 100px; height: 50px;">
-</a>
 </div>
 
-<div class="container">
-<div class="item">
-<a>
+<div class="inner-div">
 <img src="images/logo-numpy.png" alt="Image 1" style="width: 100px; height: 50px;">
-</a>
 </div>
 
-<div class="container">
-<div class="item">
-<a>
+<div class="inner-div">
 <img src="images/logo-sk.png" alt="Image 1" style="width: 100px; height: 50px;">
-</a>
 </div>
 
-<div class="container">
-<div class="item">
-<a>
+</div>
+
+<div style="display: flex; ">
+
+<div class="inner-div">
 <img src="images/logo-dax.png" alt="Image 1" style="width: 100px; height: 50px;">
-</a>
 </div>
 
-<div class="container">
-<div class="item">
-<a>
+<div class="inner-div">
 <img src="images/logo-html.png" alt="Image 1" style="width: 100px; height: 50px;">
-</a>
 </div>
 
-<div class="container">
-<div class="item">
-<a>
+<div class="inner-div">
 <img src="images/logo-quarto.png" alt="Image 1" style="width: 100px; height: 50px;">
-</a>
 </div>
 
-<div class="container">
-<div class="item">
-<a>
+<div class="inner-div">
 <img src="images/logo-git.png" alt="Image 1" style="width: 100px; height: 50px;">
-</a>
 </div>
 
-<div class="container">
-<div class="item">
-<a>
+<div class="inner-div">
 <img src="images/logo-jupyter.png" alt="Image 1" style="width: 100px; height: 50px;">
-</a>
 </div>
 
-</body>
-</html>
+</div>
 
-### Find me
+### Prior work experiences
 ***
-<html>
-<head>
-<style>
-.container {
-text-align: left;
-display: inline;
-flex-wrap: wrap-reverse;
-}
-
-.item {
-display: inline-block;
-margin: 5px;
-}
-
-.item img {
-vertical-align: left;
-margin-right: 10px;
-}
-
-.item p {
-display: inline-block;
-margin: 0 0 0 10px;
-}
-</style>
-</head>
-<body>
-
-<div class="container">
-<div class="item">
-<a href="mailto:vertikalwillis@gmail.com">
-<img src="images/logo-email.png" alt="Image 1" style="width: 40px; height: 40px;">Email
-</a>
+<div class="text-container">
+  <p>**Palm oil industry company (JAKARTA)**</p>
+  <p class="text-right">2023</p>
 </div>
-
-<div class="container">
-<div class="item">
-<a href="https://linkedin.com">
-<img src="images/logo-linkedin.png" alt="Image 1" style="width: 40px; height: 40px;">LinkedIn
-</a>
+Purchasing officer
+<div style="margin-left: -20px; margin-right: 180px;">
+* Research potential vendors.
+* Compare and evaluate offers from vendors.
+* Negotiate contract of terms of agreement and pricing.
+* Track orders and ensure timely delivery.
+* Review quality of purchased products.
+* Maintain updated records of purchased, products, delivery information and invoice.
+* Prepare reports on purchases.
 </div>
+<hr style="border: 1px dashed black;" />
 
-<div class="container">
-<div class="item">
-<a href="https://github.com/vertikalwil">
-<img src="images/logo-github.png" alt="Image 1" style="width: 40px; height: 40px;">GitHub
-</a>
+<div class="text-container">
+  <p>**Coconut industry company (STABAT)**</p>
+  <p class="text-right">2022</p>
 </div>
-
-<div class="container">
-<div class="item">
-<a href="https://www.hackerrank.com/vertikalwillis">
-<img src="images/logo-hacker.png" alt="Image 1" style="width: 40px; height: 40px;">HackerRank
-</a>
+MT Production
+<div style="margin-left: -20px; margin-right: 180px;">
+* Learn the process of making desiccated coconut from raw coconut.
+* Learn about the production machinery (technical and maintain).
+* Ensure employee to work as Standard Operating Procedure (SOP).
+* Do continuous improvement and brainstorm to increase machine efficiency and effectiveness.
 </div>
+<hr style="border: 1px dashed black;" />
 
-<div class="container">
-<div class="item">
-<a href="https://10fastfingers.com/user/868292/">
-<img src="images/logo-10ff.png" alt="Image 1" style="width: 40px; height: 40px;">10FastFingers
-</a>
+<div class="text-container">
+  <p>**Crusher trading company (MEDAN)**</p>
+  <p class="text-right">2020-2022</p>
 </div>
+Purchasing Officer
+<div style="margin-left: -20px; margin-right: 180px;">
+* Research potential vendors.
+* Compare and evaluate offers from vendors.
+* Negotiate contract of terms of agreement and pricing.
+* Track orders and ensure timely delivery.
+* Review quality of purchased products.
+* Enter order details (e.g. Vendor, prices) into internal database.
+* Maintain updated records of purchased, products, delivery information and invoice.
+* Prepare reports on purchases.
+* Monitor stock levels and place orders as needed.
+* Coordinate with warehouse staff to ensure proper storage.
+* Coordinate with warehouse about delivery goods to customers.
+* Prepare and check paper work for logistic/shipment.
+</div>
+<hr style="border: 1px dashed black;" />
 
-</body>
-</html>
+<div class="text-container">
+  <p>**Transportation company (MEDAN)**</p>
+  <p class="text-right">2018-2020</p>
+</div>
+Workshop Analyst
+<div style="margin-left: -20px; margin-right: 180px;">
+* Monitor and follow up on breakdown vehicles to user (branch workshop supervisor).
+* Analyze mechanic's daily job by report that sent by user every day.
+* Analyze and approve vehicle's spare parts request.
+* Analyze and approve vehicle's repair request.
+* Coordinate and follow up with the purchasing department about outstanding spare parts purchase requests.
+* Coordinate and negotiate with external workshops for heavy repair work that can't be done in the internal workshop.
+* Analyze vehicles for an unreasonable breakdown.
+* Analyze and evaluate the mechanic's monthly performance based on the user's and the mechanic's daily reports.
+* Prepare a daily, weekly, and monthly report.
+* Helped supervisor make annual budgets.
+</div>
+<hr style="border: 1px dashed black;" />
+
+<div class="text-container">
+  <p>**Transportation company (MEDAN)**</p>
+  <p class="text-right">2017-2018</p>
+</div>
+Purchasing Officer
+<div style="margin-left: -20px; margin-right: 180px;">
+* Research potential vendors.
+* Compare and evaluate offers from vendors.
+* Negotiate contract of terms of agreement and pricing.
+* Track orders and ensure timely delivery.
+* Review quality of purchased products.
+* Enter order details (e.g. Vendor, prices) into internal database.
+* Maintain updated records of purchased, products, delivery information and invoice.
+* Prepare reports on purchases.
+* Monitor stock levels and place orders as needed.
+* Coordinate with warehouse staff to ensure proper storage.
+</div>
+<hr style="border: 1px dashed black;" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
