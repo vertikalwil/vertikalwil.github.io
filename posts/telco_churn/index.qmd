@@ -1,7 +1,7 @@
 ---
 title: "Telco customer churn"
 image: ../../images/telco-thumbnail.png
-author: "vertikal"
+author: "Vertikal"
 date: "2023-08-03"
 description: How I deeply process telco customer churn dataset.
 categories: [classification,machine-learning,data-science]
@@ -10,6 +10,7 @@ toc-title: Contents
 format:
   html:
     code-fold: show
+    
 notebook-view:
     notebook: ../../ipynb/final-project.ipynb
     title: "Download files"
@@ -20,12 +21,30 @@ notebook-links: global
 On this occasion, I would like to discuss one of my projects that involves the telco customer churn dataset. Who doesn't know about telco customer churn? This dataset is exceedingly common, and I'm confident that every data science practitioner has worked with it at some point. So, why am I still using this dataset? It's because I want to demonstrate a different and more detailed approach on how to process it. Here, I will conduct a deeper Exploratory Data Analysis (EDA) and showcase how to create and fine-tune a machine learning model to align it with the intended business objectives, followed by interpreting the results.
 
 Of course, the goals of this project are to produce actionable insights and the most suitable predictive model aligned with the existing business concepts.
-On this particular blog post, I will show detailed step by step on how to do the projects (including the codes) so this will be very technical, but if you just want to see the big picture you can visit this link:
+On this particular blog post, I will show detailed step by step on how to do the projects (including the codes) so this will be very technical, but if you just want to see the big picture you can visit these link:
 
 Presentation link : [Click here](https://docs.google.com/presentation/d/e/2PACX-1vR0dOy0icSQtH47y4pXOvki-xwIL4wtljaLZkL_NXMp5fN2sBzJlLuYRaGY5SWqew/pub?start=true&loop=false&delayms=60000) <Br>
 App deployment link : [Shinyapps.io](https://vertikalwil.shinyapps.io/telco_deploy/)
 
+
 ::: {style="font-size: 90%;"}
 {{< embed ../../ipynb/final-project.ipynb echo=true >}}
 :::
+
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="overlay" id="overlay">
+<div class="popup">
+<p>Hey, in case you missed it, I've also provided links to the PPT presentation and to shinyapps.io platform for the app deployment. You can find these links at the top of the page. Thanks!</p>
+<a class="special-button" id="closed">I understand!</a>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
 
