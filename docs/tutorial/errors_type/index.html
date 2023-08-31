@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Vertikal">
+<meta name="dcterms.date" content="2023-08-30">
+<meta name="description" content="How it is important to determine the cost of missclassification error before starting binary classification project especially with imbalanced dataset.">
 
-<title>Vertikal Willis – tutorial</title>
+<title>Vertikal Willis - The importance of types of errors</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,51 +63,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="assets/ek-styles.css">
+<link rel="stylesheet" href="../../assets/ek-styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">VERTIKAL W.<span class="icon-line"></span></span>
     </a>
   </div>
@@ -117,15 +87,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html" rel="" target="">
+    <a class="nav-link" href="../../posts.html" rel="" target="">
  <span class="menu-text">portfolios</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./tutorial.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../tutorial.html" rel="" target="">
  <span class="menu-text">tutorials</span></a>
   </li>  
 </ul>
@@ -136,69 +106,104 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">The importance of types of errors</h1>
+                  <div>
+        <div class="description">
+          How it is important to determine the cost of missclassification error before starting binary classification project especially with imbalanced dataset.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">classification</div>
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">data-science</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Vertikal </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 30, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="classification">classification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data-science">data-science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="machine-learning">machine-learning <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<p>When dealing with imbalanced datasets, if you don’t include the classification costs of type 1 and type 2 error you are most likely will get sub-optimal result. Because usually in imbalanced datasets the positive class is more important than the negative class (type 2 error is more severe than type 1 error) and by default all machine learning models are treating both positive class and negative class equally. In this posts, I will explained how important to determine the cost of type 1 and type 2 error and tuned your model based on it.</p>
+<h4 class="anchored">
+<strong>Introduction of Type 1 and Type 2 errors</strong>
+</h4>
+<hr>
+<p>We’re advised against relying on accuracy when dealing with imbalanced datasets. This is because the model mostly predicts the more common class and can give a misleading result. However, if we think about it logically, we might not be too concerned about which class the model prefers. What really matters is that the model minimizes its error predictions as much as possible or gets the highest number of accuracy, right? We’re also told to use techniques like undersampling or oversampling to balance the data so that the model can treat both classes more equally. So, what’s the actual reason for doing all of this? The answer is because of the differences in the costs/effects between Type 1 and Type 2 errors.</p>
+<p>Type 1 error, commonly known as false positive, is a situation where the model predicts a positive output, but in reality, it’s negative (for example: the model predicts someone has COVID, but in truth, that person doesn’t have COVID).</p>
+<p>Type 2 error, often referred to as false negative, is a situation where the model predicts a negative output, but in reality, it’s positive (for example: the model predicts someone doesn’t have COVID, but in truth, that person has COVID).</p>
+<p>If the consequences of Type 1 and Type 2 errors are the same (equal misclassification cost) in severe imbalanced dataset, then high accuracy may indicate a good model, and there’s no need to go through the trouble of using under/oversampling techniques because the objective is to minimize both False Positives (FP) and False Negatives (FN) as much as possible. But if it is the case then it’s also no use to build a predictive model, just predict everything is negative class.</p>
+<p>However, in real-life scenarios, in most cases of imbalanced datasets, Type 1 and Type 2 errors have different consequences where Type 2 error’s impact is always more severe than Type 1 error (for instance, in COVID cases). If Type 2 error is more critical than Type 1 error, then the positive class becomes more important than the negative class. As a result, we cannot rely on accuracy because accuracy evaluates the model’s performance as a whole, whereas we want to assess the model’s performance specifically on the positive class. Some metrics used to evaluate the model’s performance on the positive class are recall and precision.</p>
+<p><img src="../../images/metrics.jpg" width="250px;" height="150px"> </p>
+<p>Looking at the formulas for recall and precision above, you can see that both of them share the same numerator, “True positive.” This is because the main goal of these metrics is to specifically measure the model’s performance in detecting the positive class.</p>
+<p><strong>Recall / Sensitivity</strong> : How sensitive is the model in capturing/predicting the positive class. <strong>Precision</strong> : How accurate are the positive predictions made by a model.</p>
+<p>The relationship between Recall and Precision is a trade-off, meaning that if you want the model to be more inclined to detect the positive class (higher recall), the model will also make more mistakes in predicting the positive class (lower precision), and vice versa.</p>
+<h4 class="anchored">
+<strong>Why SMOTE and other sampling techniques actually only solve half of your imbalanced classification problem</strong>
+</h4>
+<hr>
+<p>As a recap, we now understand that in the case of an imbalanced dataset, the positive class is more important than the negative class because Type 2 error is more severe than Type 1 error.</p>
+<p>With an imbalanced dataset, the model tends to predict the majority class, which is often referred to as the negative class. When the dataset is balanced using sampling techniques, now the model doesn’t lean towards either class (balanced). However, remember that our goal is to make the model more inclined towards the positive class, not the negative class or treating both classes equally. This is why balancing the dataset doesn’t completely solve the problem but it does help.</p>
+<h4 class="anchored">
+<strong>Don’t use default decision threshold</strong>
+</h4>
+<hr>
+<p>Most classification models such as decision trees, random forests, AdaBoost, and gradient boosting don’t directly output results as classes, but rather as probabilities. The decision threshold is commonly set at 0.5 or 50%, which means that if the output is 60%, the result is the positive class, and if the output is 45%, the result is the negative class, and so on. Generally, in the case of imbalanced datasets, we aim to achieve a higher recall while sacrificing some precision (because the positive class is more important than the negative class). Take a look at the example below</p>
+<div style="text-align: center;">
+<p><img src="../../images/data_truth.png"> </p>
+</div>
+<p>Here I use a simple data, where the y-axis is the predictor (feature) and the x-axis is the model output probability. <br><br></p>
+<div style="text-align: center;">
+<p><img src="../../images/gif_result.gif"> </p>
+</div>
+<p>The red line marks the decision threshold, and the blue area shows where the model predicts the positive class. Notice that as we lower the decision threshold, the model starts predicting the positive class more often. And if you set the threshold to 0, the model will predict everything a positive class. In other words, reducing the decision threshold leads to an increase in recall while also causing a decrease in precision.</p>
+<p>In imbalanced datasets, it’s understood that a lower threshold is often needed. However, the question remains: What is the ideal threshold?</p>
+<h4 class="anchored">
+<strong>Determining the best threshold</strong>
+</h4>
+<hr>
+To determine the best threshold or the most optimal balance between recall and precision, first you must define the ratio between FP and FN. How severe are the consequences of FN compared to FP? Is mistakenly detecting someone without COVID who actually has it worse than detecting 10 people with COVID who are actually COVID-free? <br><br> So, it’s not enough to just establish which is worse between FP and FN, we must also decide on their cost/consequences ratio. In this example, I’ll assume an FN:FP ratio of 3:1, meaning the consequences of false negatives are three times more severe than false positives. <br> Let’s calculate the miss classification costs on all threshold : <br>
+<div style="font-size: 18px; margin-bottom: 10px; margin-top: 10px">
+<strong>Wrong classification cost = False Negative * 3 + False positive</strong>
+</div>
+<div>
+<p><img src="../../images/cost.jpg" width="200px;" height="300px"> </p>
+</div>
+<p>The threshold with the lowest miss classification costs is the best threshold which 0.1 and 0.2 in this case.</p>
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="classification,machine-learning,data-science" data-listing-date-sort="1693328400000" data-listing-file-modified-sort="1693492441233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
-<div class="thumbnail">
-<p><a href="./tutorial/errors_type/index.html"> <img src="./images/telco-thumbnail.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./tutorial/errors_type/index.html">
-<h3 class="no-anchor listing-title">
-The importance of types of errors
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('classification'); return false;">
-classification
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
-machine-learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data-science'); return false;">
-data-science
-</div>
-</div>
-<a href="./tutorial/errors_type/index.html">
-<div class="listing-description">
-<p>How it is important to determine the cost of missclassification error before starting binary classification project especially with imbalanced dataset.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./tutorial/errors_type/index.html">
-<div class="listing-date">
-Aug 30, 2023
-</div>
-<div class="listing-author">
-Vertikal
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -450,5 +455,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -4,5 +4,11 @@
     "items": [
       "/posts/telco_churn/index.html"
     ]
+  },
+  {
+    "listing": "/tutorial.html",
+    "items": [
+      "/tutorial/errors_type/index.html"
+    ]
   }
 ]
