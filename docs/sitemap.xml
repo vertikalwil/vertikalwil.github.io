@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://vertikalwil.github.io/about.html</loc>
-    <lastmod>2023-08-31T05:40:57.738Z</lastmod>
+    <lastmod>2023-09-01T05:01:42.833Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/posts.html</loc>
-    <lastmod>2023-08-31T05:47:43.498Z</lastmod>
+    <lastmod>2023-09-01T04:59:44.383Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/ipynb/final-project-original.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://vertikalwil.github.io/index.html</loc>
-    <lastmod>2023-08-31T05:41:01.568Z</lastmod>
+    <lastmod>2023-09-01T05:01:18.753Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/posts/telco_churn/index.html</loc>
@@ -26,10 +26,26 @@
   </url>
   <url>
     <loc>https://vertikalwil.github.io/tutorial.html</loc>
-    <lastmod>2023-08-31T14:34:02.153Z</lastmod>
+    <lastmod>2023-09-01T04:08:17.639Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/tutorial/errors_type/index.html</loc>
-    <lastmod>2023-08-31T14:34:01.743Z</lastmod>
+    <lastmod>2023-09-01T04:08:17.336Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/talks.html</loc>
+    <lastmod>2023-09-01T05:02:25.453Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/talks/errors_type/index.html</loc>
+    <lastmod>2023-09-01T05:02:25.133Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/portfolios.html</loc>
+    <lastmod>2023-09-01T05:01:12.803Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/portfolios/telco_churn/index.html</loc>
+    <lastmod>2023-09-01T05:01:12.533Z</lastmod>
   </url>
 </urlset>

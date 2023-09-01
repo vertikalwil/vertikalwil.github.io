@@ -2,12 +2,12 @@
 title: "The importance of types of errors"
 image: ../../images/telco-thumbnail.png
 author: "Vertikal"
-date: "2023-08-30"
-description: How it is important to determine the cost of missclassification error before starting binary classification project especially with imbalanced dataset. 
-categories: [classification,machine-learning,data-science]
+date: "2023-08-31"
+description: How it is important to determine the cost of misclassification error before starting binary classification project especially with imbalanced dataset. 
+categories: [classification,machine-learning,data-science,hyphothesis testing,imbalanced]
 ---
 
-When dealing with imbalanced datasets, if you don't include the classification costs of type 1 and type 2 error you are most likely will get sub-optimal result. Because usually in imbalanced datasets the positive class is more important than the negative class (type 2 error is more severe than type 1 error) and by default all machine learning models are treating both positive class and negative class equally. In this posts, I will explained how important to determine the cost of type 1 and type 2 error and tuned your model based on it.
+When dealing with imbalanced datasets, if you don't include the classification costs of type 1 and type 2 errors you are most likely will get sub-optimal result. Because usually in imbalanced datasets the positive class is more important than the negative class (type 2 error is more severe than type 1 error) and by default all machine learning models are treating both positive class and negative class equally. In this post, I will explained how important to determine the cost of type 1 and type 2 error and tuned your model based on it.
 
 <h4>**Introduction of Type 1 and Type 2 errors**</h4>
 ***
@@ -37,7 +37,7 @@ The relationship between Recall and Precision is a trade-off, meaning that if yo
 ***
 As a recap, we now understand that in the case of an imbalanced dataset, the positive class is more important than the negative class because Type 2 error is more severe than Type 1 error. 
 
-With an imbalanced dataset, the model tends to predict the majority class, which is often referred to as the negative class. When the dataset is balanced using sampling techniques, now the model doesn't lean towards either class (balanced). However, remember that our goal is to make the model more inclined towards the positive class, not the negative class or treating both classes equally. This is why balancing the dataset doesn't completely solve the problem but it does help.
+With an imbalanced dataset, the model tends to predict the majority class, which is often referred to as the negative class. When the dataset is balanced using sampling techniques, the model doesn't lean towards either class (balanced). However, remember that our goal is to make the model more inclined towards the positive class, not the negative class or treating both classes equally. This is why balancing the dataset doesn't completely solve the problem but it does help.
 
 
 <h4>**Don't use default decision threshold**</h4>
@@ -63,14 +63,14 @@ In imbalanced datasets, it's understood that a lower threshold is often needed. 
 ***
 To determine the best threshold or the most optimal balance between recall and precision, first you must define the ratio between FP and FN. How severe are the consequences of FN compared to FP? Is mistakenly detecting someone without COVID who actually has it worse than detecting 10 people with COVID who are actually COVID-free? <Br><br>
 So, it's not enough to just establish which is worse between FP and FN, we must also decide on their cost/consequences ratio. In this example, I'll assume an FN:FP ratio of 3:1, meaning the consequences of false negatives are three times more severe than false positives. <Br>
-Let's calculate the miss classification costs on all threshold : <Br>
+Let's calculate the misclassification costs on all threshold : <Br>
 <div style="font-size: 18px; margin-bottom: 10px; margin-top: 10px">**Wrong classification cost = False Negative * 3 + False positive** </div>
 
 <div>
 <img src="../../images/cost.jpg" width=200px; height=300px> </img>
 </div>
 
-The threshold with the lowest miss classification costs is the best threshold which 0.1 and 0.2 in this case.
+The threshold with the lowest misclassification costs is the best threshold which 0.1 and 0.2 in this case.
 
 
 

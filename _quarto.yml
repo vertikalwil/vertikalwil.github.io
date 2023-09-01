@@ -19,9 +19,9 @@ website:
       - text: about
         href: about.qmd
       - text: portfolios
-        href: posts.qmd
-      - text: tutorials
-        href: tutorial.qmd
+        href: portfolios.qmd
+      - text: talks
+        href: talks.qmd
 
   favicon: images/logo.png
  

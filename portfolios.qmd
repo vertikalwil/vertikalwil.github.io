@@ -1,6 +1,6 @@
 ---
 listing:
-  contents: posts
+  contents: portfolios
   sort: "date desc"
   type: default
   categories: true

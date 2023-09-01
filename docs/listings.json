@@ -10,5 +10,17 @@
     "items": [
       "/tutorial/errors_type/index.html"
     ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/errors_type/index.html"
+    ]
+  },
+  {
+    "listing": "/portfolios.html",
+    "items": [
+      "/portfolios/telco_churn/index.html"
+    ]
   }
 ]
