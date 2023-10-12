@@ -1,0 +1,106 @@
+---
+title: "Missing values handling"
+tbl-colwidths: [35,25]
+image: ../../images/telco-thumbnail.png
+author: "Vertikal"
+date: "2023-10-13"
+description: The best way to handle missing values is by understanding the data.
+categories: [data-cleaning,data-science,imputation]
+---
+
+On this occasion, I would like to discuss missing values. There are various methods for imputing missing values, such as using descriptive statistics like the mean, median, mode, and employing techniques like the KNN Imputer. However, it is essential to first gain a deep understanding of the domain-specific context and the data itself. Before imputing missing values, we must first classify them into three categories, which are:
+
+#### Missing Completely At Random (MCAR)
+This means that missing values are truly missing without any discernible pattern or relation to other variables or factors. They are simply missing. For example, when people do not input certain values in a form due to carelessness or negligence. This type of missing values should not be many.
+
+#### Missing At Random (MAR)
+This means that the missing values are not entirely missing. First, it could be because the values are 0 or None. Second, they may have a relationship with or can be inferred from other columns or variables. For example, when people sell an iPhone online but don't fill in the 'Operating system' field because iPhones always run on iOS and can never be Android. A second example would be when people sell their houses online but don't specify the number of floors because it can be visually observed in the photos.
+
+#### Missing Not At Random (MNAR)
+This means that the missing values are not related to other variables within the dataset but are instead associated with external factors. For example, individuals with significant debt may choose not to tell it. Imputing this type of missing values is more challenging due to the influence of external factors.
+
+After classifying them, let's proceed to the practical demonstration of how to impute missing values.
+
+#### Example 1
+Let's say you want to retrieve employee information from the servers to build a salary prediction model.
+
+Name| Age| Position| Salary|
+-|-|-|-|
+Sarah Connor|35|Accounting|50k
+John Connor|32|Marketing|35k
+Kyle Reese|28|IT |45k
+Vertikal||IT|45k
+
+You can see that there's a missing value in the 'Age' column under the 'vertikal' name. Since this data is derived from employee information stored on the server, it indicates that the missing value must be MCAR and not MAR or MNAR. Let's take into consideration that this missing value is relatively small, so an appropriate imputation method would be to use the mean or median of the 'Age' column. If the missing values are high, then it's better to report it to database administrator because by context, 'Age' has no relation to other columns and thus only can be imputed by itself.
+
+#### Example 2
+Imagine you are conducting data collection on an online vehicle listing website.
+
+Brand| Type| Transmission| Color| Price|
+-|-|-|-|-|
+Toyota|Innova|Manual|White|200Jt
+Honda|Brio|Automatic|Orange|125Jt
+Honda|Brio|Manual|Black|110Jt
+Suzuki|Ertiga|Manual|Red|140Jt
+Suzuki|Ertiga||White|142Jt
+Suzuki|Ertiga|Automatic|Black|165Jt
+
+There's a missing value in the 'Transmission' column, and upon investigation, it's apparent that users mentioned the transmission type in the title rather than in the 'Vehicle Transmission Type' field. In this case, the missing value is of type MAR. Three possible approaches to impute this missing value are: directly inspecting the ad, re-scraping the data to extract 'title' information and apply text mining, or using a KNN Imputer based on the contextual knowledge that the same vehicle with automatic transmission is typically more expensive than manual transmission. The third method, KNN Imputer, is preferable as it take less time and resources consuming compared to other methods.
+
+#### Example 3
+Let's say you're thinking about surveying gym-goers for some fitness insights.
+
+Gender| Weight| Age| Membership|
+-|-|-|-|
+Male|95Kg|25|6M|
+Female||23|1Y|
+Male|85Kg|35|6M|
+Male|80Kg|40|2Y|
+Female||28|6M|
+Male|102Kg|38|3M|
+Female|55Kg|41|1Y|
+
+There's a missing column in the 'Weight' column, and initially, you might think that these missing values are MCAR. However, you come to realize that the missing values mostly occur for individuals with a gender of 'Female.' This could be due to that females may be more reluctant to disclose their weight when they are overweight. Based on this pattern, you can consider these missing values as type MNAR.
+If there are only a few missing values, you can impute the weight for females by using the 'max' value for weight among females. However, if the missing values are more extensive, it's essential to validate the assumption first before proceeding with imputation.
+
+#### Example 4
+Let's imagine you want to build a machine learning model to predict whether an email is spam or not.
+
+Domain| Words_count| From| Spam|
+-|-|-|-|
+Public|235|IND|Yes|
+Public|238|USA|Yes|
+Public|255|IND|Yes|
+Public|267|DMK|No|
+Public|310|EUR|No|
+||320|AUS|No|
+
+Let's consider that you have 10,000 rows of data above, and 98% of the data falls within the public domain. In such cases, you don't need to impute the missing values, as the column has high cardinality, as it is likely to be dropped later in the analysis. Therefore, before considering imputing missing values, choose the features that you want to include in your analysis first to avoid unnecessary effort and redundancy.
+
+#### Example 5
+Look at the dataset below:
+
+Name| Age| Position| Salary|
+-|-|-|-|
+Sarah Connor|35|Unknown|50k
+John Connor|32|Marketing|35k
+Kyle Reese|28|Unknown |45k
+Vertikal|32|IT|45k
+John Cena|33|Marketing|35k
+Tom|28|IT |45k
+
+You may not observe any missing values in the data, but take a closer look at the 'Position' column with 'Unknown' value. It should still be considered a form of missing data. It's a good reminder that missing values can take various forms and may not always be represented as NULL or NaN. In this case, 'Unknown' essentially signifies that the specific position information is not available, making it a type of missing value. It's crucial to remain vigilant and flexible in identifying and handling missing data in various formats.
+
+#### Conclusions
+Understanding the data is crucial before you start imputing missing values. Carelessly applying imputation techniques without a clear understanding of the data context can lead to incorrect results, which could have significant consequences.
+
+
+
+
+
+
+
+
+
+
+

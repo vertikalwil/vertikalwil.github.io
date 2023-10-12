@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Vertikal">
+<meta name="dcterms.date" content="2023-10-13">
+<meta name="description" content="The best way to handle missing values is by understanding the data.">
+
+<title>Vertikal Willis - Missing values handling</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../assets/ek-styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">VERTIKAL W.<span class="icon-line"></span></span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../portfolios.html" rel="" target="">
+ <span class="menu-text">portfolios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html" rel="" target="">
+ <span class="menu-text">talks</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Missing values handling</h1>
+                  <div>
+        <div class="description">
+          The best way to handle missing values is by understanding the data.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">data-cleaning</div>
+                <div class="quarto-category">data-science</div>
+                <div class="quarto-category">imputation</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Vertikal </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 13, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>On this occasion, I would like to discuss missing values. There are various methods for imputing missing values, such as using descriptive statistics like the mean, median, mode, and employing techniques like the KNN Imputer. However, it is essential to first gain a deep understanding of the domain-specific context and the data itself. Before imputing missing values, we must first classify them into three categories, which are:</p>
+<section id="missing-completely-at-random-mcar" class="level4">
+<h4 class="anchored" data-anchor-id="missing-completely-at-random-mcar">Missing Completely At Random (MCAR)</h4>
+<p>This means that missing values are truly missing without any discernible pattern or relation to other variables or factors. They are simply missing. For example, when people do not input certain values in a form due to carelessness or negligence. This type of missing values should not be many.</p>
+</section>
+<section id="missing-at-random-mar" class="level4">
+<h4 class="anchored" data-anchor-id="missing-at-random-mar">Missing At Random (MAR)</h4>
+<p>This means that the missing values are not entirely missing. First, it could be because the values are 0 or None. Second, they may have a relationship with or can be inferred from other columns or variables. For example, when people sell an iPhone online but don’t fill in the ‘Operating system’ field because iPhones always run on iOS and can never be Android. A second example would be when people sell their houses online but don’t specify the number of floors because it can be visually observed in the photos.</p>
+</section>
+<section id="missing-not-at-random-mnar" class="level4">
+<h4 class="anchored" data-anchor-id="missing-not-at-random-mnar">Missing Not At Random (MNAR)</h4>
+<p>This means that the missing values are not related to other variables within the dataset but are instead associated with external factors. For example, individuals with significant debt may choose not to tell it. Imputing this type of missing values is more challenging due to the influence of external factors.</p>
+<p>After classifying them, let’s proceed to the practical demonstration of how to impute missing values.</p>
+</section>
+<section id="example-1" class="level4">
+<h4 class="anchored" data-anchor-id="example-1">Example 1</h4>
+<p>Let’s say you want to retrieve employee information from the servers to build a salary prediction model.</p>
+<table class="table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Age</th>
+<th>Position</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sarah Connor</td>
+<td>35</td>
+<td>Accounting</td>
+<td>50k</td>
+</tr>
+<tr class="even">
+<td>John Connor</td>
+<td>32</td>
+<td>Marketing</td>
+<td>35k</td>
+</tr>
+<tr class="odd">
+<td>Kyle Reese</td>
+<td>28</td>
+<td>IT</td>
+<td>45k</td>
+</tr>
+<tr class="even">
+<td>Vertikal</td>
+<td></td>
+<td>IT</td>
+<td>45k</td>
+</tr>
+</tbody>
+</table>
+<p>You can see that there’s a missing value in the ‘Age’ column under the ‘vertikal’ name. Since this data is derived from employee information stored on the server, it indicates that the missing value must be MCAR and not MAR or MNAR. Let’s take into consideration that this missing value is relatively small, so an appropriate imputation method would be to use the mean or median of the ‘Age’ column. If the missing values are high, then it’s better to report it to database administrator because by context, ‘Age’ has no relation to other columns and thus only can be imputed by itself.</p>
+</section>
+<section id="example-2" class="level4">
+<h4 class="anchored" data-anchor-id="example-2">Example 2</h4>
+<p>Imagine you are conducting data collection on an online vehicle listing website.</p>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Brand</th>
+<th>Type</th>
+<th>Transmission</th>
+<th>Color</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Toyota</td>
+<td>Innova</td>
+<td>Manual</td>
+<td>White</td>
+<td>200Jt</td>
+</tr>
+<tr class="even">
+<td>Honda</td>
+<td>Brio</td>
+<td>Automatic</td>
+<td>Orange</td>
+<td>125Jt</td>
+</tr>
+<tr class="odd">
+<td>Honda</td>
+<td>Brio</td>
+<td>Manual</td>
+<td>Black</td>
+<td>110Jt</td>
+</tr>
+<tr class="even">
+<td>Suzuki</td>
+<td>Ertiga</td>
+<td>Manual</td>
+<td>Red</td>
+<td>140Jt</td>
+</tr>
+<tr class="odd">
+<td>Suzuki</td>
+<td>Ertiga</td>
+<td></td>
+<td>White</td>
+<td>142Jt</td>
+</tr>
+<tr class="even">
+<td>Suzuki</td>
+<td>Ertiga</td>
+<td>Automatic</td>
+<td>Black</td>
+<td>165Jt</td>
+</tr>
+</tbody>
+</table>
+<p>There’s a missing value in the ‘Transmission’ column, and upon investigation, it’s apparent that users mentioned the transmission type in the title rather than in the ‘Vehicle Transmission Type’ field. In this case, the missing value is of type MAR. Three possible approaches to impute this missing value are: directly inspecting the ad, re-scraping the data to extract ‘title’ information and apply text mining, or using a KNN Imputer based on the contextual knowledge that the same vehicle with automatic transmission is typically more expensive than manual transmission. The third method, KNN Imputer, is preferable as it take less time and resources consuming compared to other methods.</p>
+</section>
+<section id="example-3" class="level4">
+<h4 class="anchored" data-anchor-id="example-3">Example 3</h4>
+<p>Let’s say you’re thinking about surveying gym-goers for some fitness insights.</p>
+<table class="table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Gender</th>
+<th>Weight</th>
+<th>Age</th>
+<th>Membership</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Male</td>
+<td>95Kg</td>
+<td>25</td>
+<td>6M</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td></td>
+<td>23</td>
+<td>1Y</td>
+</tr>
+<tr class="odd">
+<td>Male</td>
+<td>85Kg</td>
+<td>35</td>
+<td>6M</td>
+</tr>
+<tr class="even">
+<td>Male</td>
+<td>80Kg</td>
+<td>40</td>
+<td>2Y</td>
+</tr>
+<tr class="odd">
+<td>Female</td>
+<td></td>
+<td>28</td>
+<td>6M</td>
+</tr>
+<tr class="even">
+<td>Male</td>
+<td>102Kg</td>
+<td>38</td>
+<td>3M</td>
+</tr>
+<tr class="odd">
+<td>Female</td>
+<td>55Kg</td>
+<td>41</td>
+<td>1Y</td>
+</tr>
+</tbody>
+</table>
+<p>There’s a missing column in the ‘Weight’ column, and initially, you might think that these missing values are MCAR. However, you come to realize that the missing values mostly occur for individuals with a gender of ‘Female.’ This could be due to that females may be more reluctant to disclose their weight when they are overweight. Based on this pattern, you can consider these missing values as type MNAR. If there are only a few missing values, you can impute the weight for females by using the ‘max’ value for weight among females. However, if the missing values are more extensive, it’s essential to validate the assumption first before proceeding with imputation.</p>
+</section>
+<section id="example-4" class="level4">
+<h4 class="anchored" data-anchor-id="example-4">Example 4</h4>
+<p>Let’s imagine you want to build a machine learning model to predict whether an email is spam or not.</p>
+<table class="table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Words_count</th>
+<th>From</th>
+<th>Spam</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Public</td>
+<td>235</td>
+<td>IND</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Public</td>
+<td>238</td>
+<td>USA</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Public</td>
+<td>255</td>
+<td>IND</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Public</td>
+<td>267</td>
+<td>DMK</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Public</td>
+<td>310</td>
+<td>EUR</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>320</td>
+<td>AUS</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>Let’s consider that you have 10,000 rows of data above, and 98% of the data falls within the public domain. In such cases, you don’t need to impute the missing values, as the column has high cardinality, as it is likely to be dropped later in the analysis. Therefore, before considering imputing missing values, choose the features that you want to include in your analysis first to avoid unnecessary effort and redundancy.</p>
+</section>
+<section id="example-5" class="level4">
+<h4 class="anchored" data-anchor-id="example-5">Example 5</h4>
+<p>Look at the dataset below:</p>
+<table class="table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Age</th>
+<th>Position</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sarah Connor</td>
+<td>35</td>
+<td>Unknown</td>
+<td>50k</td>
+</tr>
+<tr class="even">
+<td>John Connor</td>
+<td>32</td>
+<td>Marketing</td>
+<td>35k</td>
+</tr>
+<tr class="odd">
+<td>Kyle Reese</td>
+<td>28</td>
+<td>Unknown</td>
+<td>45k</td>
+</tr>
+<tr class="even">
+<td>Vertikal</td>
+<td>32</td>
+<td>IT</td>
+<td>45k</td>
+</tr>
+<tr class="odd">
+<td>John Cena</td>
+<td>33</td>
+<td>Marketing</td>
+<td>35k</td>
+</tr>
+<tr class="even">
+<td>Tom</td>
+<td>28</td>
+<td>IT</td>
+<td>45k</td>
+</tr>
+</tbody>
+</table>
+<p>You may not observe any missing values in the data, but take a closer look at the ‘Position’ column with ‘Unknown’ value. It should still be considered a form of missing data. It’s a good reminder that missing values can take various forms and may not always be represented as NULL or NaN. In this case, ‘Unknown’ essentially signifies that the specific position information is not available, making it a type of missing value. It’s crucial to remain vigilant and flexible in identifying and handling missing data in various formats.</p>
+</section>
+<section id="conclusions" class="level4">
+<h4 class="anchored" data-anchor-id="conclusions">Conclusions</h4>
+<p>Understanding the data is crucial before you start imputing missing values. Carelessly applying imputation techniques without a clear understanding of the data context can lead to incorrect results, which could have significant consequences.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/vertikalwil\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://vertikalwil.github.io/about.html</loc>
-    <lastmod>2023-10-12T04:33:01.827Z</lastmod>
+    <lastmod>2023-10-12T17:26:51.853Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/portfolios/houses_tangerang/index.html</loc>
-    <lastmod>2023-10-12T04:33:00.787Z</lastmod>
+    <lastmod>2023-10-12T17:26:51.013Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/ipynb/telco/final-project.html</loc>
-    <lastmod>2023-10-12T04:32:52.705Z</lastmod>
+    <lastmod>2023-10-12T17:26:45.393Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/ipynb/houses/house_tangerang.html</loc>
-    <lastmod>2023-10-12T04:32:44.927Z</lastmod>
+    <lastmod>2023-10-12T17:26:40.113Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/index.html</loc>
-    <lastmod>2023-10-12T04:32:40.788Z</lastmod>
+    <lastmod>2023-10-12T17:26:37.173Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/talks/errors_type/index.html</loc>
-    <lastmod>2023-10-12T04:32:40.431Z</lastmod>
+    <lastmod>2023-10-12T17:26:36.413Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/talks/missing_values/index.html</loc>
+    <lastmod>2023-10-12T17:26:36.923Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/portfolios.html</loc>
-    <lastmod>2023-10-12T04:32:41.384Z</lastmod>
+    <lastmod>2023-10-12T17:26:37.563Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/ipynb/telco/final-project-original.html</loc>
-    <lastmod>2023-10-12T04:32:48.924Z</lastmod>
+    <lastmod>2023-10-12T17:26:42.803Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/portfolios/telco_churn/index.html</loc>
-    <lastmod>2023-10-12T04:32:56.941Z</lastmod>
+    <lastmod>2023-10-12T17:26:48.303Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/talks.html</loc>
-    <lastmod>2023-10-12T04:33:01.177Z</lastmod>
+    <lastmod>2023-10-12T17:26:51.363Z</lastmod>
   </url>
 </urlset>

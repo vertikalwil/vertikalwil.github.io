@@ -9,6 +9,7 @@
   {
     "listing": "/talks.html",
     "items": [
+      "/talks/missing_values/index.html",
       "/talks/errors_type/index.html"
     ]
   }
