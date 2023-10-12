@@ -1,26 +1,15 @@
 [
   {
-    "listing": "/posts.html",
+    "listing": "/portfolios.html",
     "items": [
-      "/posts/telco_churn/index.html"
-    ]
-  },
-  {
-    "listing": "/tutorial.html",
-    "items": [
-      "/tutorial/errors_type/index.html"
+      "/portfolios/houses_tangerang/index.html",
+      "/portfolios/telco_churn/index.html"
     ]
   },
   {
     "listing": "/talks.html",
     "items": [
       "/talks/errors_type/index.html"
-    ]
-  },
-  {
-    "listing": "/portfolios.html",
-    "items": [
-      "/portfolios/telco_churn/index.html"
     ]
   }
 ]

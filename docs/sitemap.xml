@@ -2,50 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://vertikalwil.github.io/about.html</loc>
-    <lastmod>2023-09-01T05:01:42.833Z</lastmod>
+    <lastmod>2023-10-12T04:33:01.827Z</lastmod>
   </url>
   <url>
-    <loc>https://vertikalwil.github.io/posts.html</loc>
-    <lastmod>2023-09-01T04:59:44.383Z</lastmod>
+    <loc>https://vertikalwil.github.io/portfolios/houses_tangerang/index.html</loc>
+    <lastmod>2023-10-12T04:33:00.787Z</lastmod>
   </url>
   <url>
-    <loc>https://vertikalwil.github.io/ipynb/final-project-original.html</loc>
-    <lastmod>2023-08-30T06:26:38.976Z</lastmod>
+    <loc>https://vertikalwil.github.io/ipynb/telco/final-project.html</loc>
+    <lastmod>2023-10-12T04:32:52.705Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/ipynb/houses/house_tangerang.html</loc>
+    <lastmod>2023-10-12T04:32:44.927Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/index.html</loc>
-    <lastmod>2023-09-09T07:49:49.324Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/posts/telco_churn/index.html</loc>
-    <lastmod>2023-08-31T06:16:18.417Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/ipynb/final-project.html</loc>
-    <lastmod>2023-08-30T06:26:41.226Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/tutorial.html</loc>
-    <lastmod>2023-09-01T04:08:17.639Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/tutorial/errors_type/index.html</loc>
-    <lastmod>2023-09-01T04:08:17.336Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/talks.html</loc>
-    <lastmod>2023-09-01T05:02:25.453Z</lastmod>
+    <lastmod>2023-10-12T04:32:40.788Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/talks/errors_type/index.html</loc>
-    <lastmod>2023-09-01T05:02:25.133Z</lastmod>
+    <lastmod>2023-10-12T04:32:40.431Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/portfolios.html</loc>
-    <lastmod>2023-09-09T07:49:51.314Z</lastmod>
+    <lastmod>2023-10-12T04:32:41.384Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/ipynb/telco/final-project-original.html</loc>
+    <lastmod>2023-10-12T04:32:48.924Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/portfolios/telco_churn/index.html</loc>
-    <lastmod>2023-09-09T07:49:56.304Z</lastmod>
+    <lastmod>2023-10-12T04:32:56.941Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/talks.html</loc>
+    <lastmod>2023-10-12T04:33:01.177Z</lastmod>
   </url>
 </urlset>

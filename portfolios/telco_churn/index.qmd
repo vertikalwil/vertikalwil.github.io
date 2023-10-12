@@ -1,5 +1,5 @@
 ---
-title: "Telco customer churn"
+title: "Telco customer churn analysis"
 image: ../../images/telco-thumbnail.png
 author: "Vertikal"
 date: "2023-08-03"
@@ -12,7 +12,7 @@ format:
     code-fold: show
     
 notebook-view:
-    notebook: ../../ipynb/final-project.ipynb
+    notebook: ../../ipynb/telco/final-project.ipynb
     title: "Download files"
     url: https://drive.google.com/drive/folders/1MfhjAzv20ACfjat73BC0Hfi4cFgb7Koj?usp=sharing
 notebook-links: global
@@ -28,7 +28,7 @@ App deployment link : [Shinyapps.io](https://vertikalwil.shinyapps.io/telco_depl
 
 
 ::: {style="font-size: 90%;"}
-{{< embed ../../ipynb/final-project.ipynb echo=true >}}
+{{< embed ../../ipynb/telco/final-project.ipynb echo=true >}}
 :::
 
 

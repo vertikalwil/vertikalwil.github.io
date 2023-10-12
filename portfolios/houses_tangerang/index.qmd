@@ -1,0 +1,28 @@
+---
+title: "Tangerang house price prediction"
+image: ../../images/tangerang.png
+author: "Vertikal"
+date: "2023-10-10"
+description: Predicting houses in Tangerang with more than 40 regions based on a real dataset scraped from one of the largest online house listings in Indonesia.
+categories: [regression,machine-learning,data-science,web-scrap]
+toc: true
+toc-title: Contents
+format:
+  html:
+    code-fold: show
+    
+notebook-view:
+    notebook: ../../ipynb/houses/house_tangerang.ipynb
+    title: "Download files"
+    url: https://drive.google.com/drive/folders/1wQSuLS2xGNgVU3_ohbOpOReOcZrJm4yb?usp=sharing
+notebook-links: global
+---
+
+This is my first end-to-end project with a scraped dataset. I used Scrapy as my scraping tool to collect data from one of the largest house listing websites in Indonesia. The most challenging part of this project was cleaning the data, as it had many missing values that required careful imputation.
+
+One of the most important lessons I learned in this project is the significance of sample selection. When training a machine learning model, we typically split the data into a training and test set. If the model performs well on both sets, we may consider it to be a good model, which could be true. However, when we apply the model to new test data from different samples, the results may not meet our expectations. This issue doesn't stem from the machine learning algorithm itself but rather from the initial sample selection, which may not accurately represent the population.
+
+
+::: {style="font-size: 90%;"}
+{{< embed ../../ipynb/houses/house_tangerang.ipynb echo=true >}}
+:::
