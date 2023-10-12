@@ -1,6 +1,6 @@
 ---
 title: "The importance of types of errors"
-image: ../../images/telco-thumbnail.png
+image: ../../images/fp_fn.jpg
 author: "Vertikal"
 date: "2023-08-31"
 description: How it is important to determine the cost of misclassification error before starting binary classification project especially with imbalanced dataset. 
