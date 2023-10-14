@@ -4050,7 +4050,7 @@ if (outputEl) {{
 </div>
 </div>
 <blockquote class="blockquote">
-<p>From the residual percentage above we can see that :<br> 1. 7.5% of data is APE that is more than 50%.<br> 2. 59% of data is APE that is lower than 20%.<br> 3. 32.5% of data is ape that is 20% - 50%.<br> 4. When the houses prices is 4 million, the model become worse as the price kept going up.</p>
+<p>From the residual percentage above we can see that :<br> 1. 7.5% of data is APE that is more than 50%.<br> 2. 59% of data is APE that is lower than 20%.<br> 3. 32.5% of data is ape that is 20% - 50%.<br> 4. When the houses prices is 4 million, the model become worse as the price kept going up.<br> 5. There are extreme APE error on 0 to 2k prices, this indicate that there are anomalies data inserted.</p>
 </blockquote>
 <div class="cell" data-execution_count="155">
 <div class="sourceCode cell-code" id="cb174"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb174-1"><a href="#cb174-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.scatter(x<span class="op">=</span>res[<span class="st">'test'</span>], y<span class="op">=</span>res[<span class="st">'residual'</span>])</span>
@@ -4090,7 +4090,7 @@ if (outputEl) {{
 </div>
 </div>
 <blockquote class="blockquote">
-<p>From 0 - 4 millions, the residuals balancely overpredict and underpredict which is expected behaviour. But from 4 millions and above, the model consistently underpredict. This mean that maybe there’s not enough samples of expensive houses for the model to learn or there’s other factors that only influencing expensive houses which is not in the samples.</p>
+<p>The unequal variance in the data implies the presence of heteroscedasticity, and a higher price is associated with increased variability. This phenomenon is considered normal since more expensive houses involve a greater number of factors in determining their prices. Additionally, the model also consistently underpredicts as house prices increase. I think we need to gather more variables or predictors that influence house prices.</p>
 </blockquote>
 </section>
 <section id="pdp-ice-plots" class="level3">
