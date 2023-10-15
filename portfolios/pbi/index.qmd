@@ -1,7 +1,7 @@
 ---
 title: "Advanced Power BI dashboard"
 open-graph:
-  image: "../../images/dax_title.png"
+  image: "../../images/pbi_thumb.png"
 image: ../../images/dax_title.png
 author: "Vertikal"
 date: "2023-10-15"
