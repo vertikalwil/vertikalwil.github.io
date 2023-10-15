@@ -1,5 +1,7 @@
 ---
 title: "Advanced Power BI dashboard"
+twitter-card:
+  image: "../../images/dax_title.png"
 image: ../../images/dax_title.png
 author: "Vertikal"
 date: "2023-10-15"
