@@ -1,6 +1,6 @@
 ---
 title: "Advanced Power BI dashboard"
-twitter-card:
+open-graph:
   image: "../../images/dax_title.png"
 image: ../../images/dax_title.png
 author: "Vertikal"
