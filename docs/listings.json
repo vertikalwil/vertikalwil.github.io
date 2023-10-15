@@ -2,6 +2,7 @@
   {
     "listing": "/portfolios.html",
     "items": [
+      "/portfolios/pbi/index.html",
       "/portfolios/houses_tangerang/index.html",
       "/portfolios/telco_churn/index.html"
     ]

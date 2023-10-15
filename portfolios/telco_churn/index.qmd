@@ -3,7 +3,7 @@ title: "Telco customer churn analysis"
 image: ../../images/telco-thumbnail.png
 author: "Vertikal"
 date: "2023-08-03"
-description: How I deeply process telco customer churn dataset.
+description: Advanced analysis, model building and model deployment on telco customer churn dataset.
 categories: [classification,machine-learning,data-science]
 toc: true
 toc-title: Contents
