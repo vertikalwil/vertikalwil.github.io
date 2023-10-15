@@ -1,8 +1,7 @@
 ---
 title: "Advanced Power BI dashboard"
-open-graph:
-  image: "../../images/pbi_thumb.png"
-image: ../../images/dax_title.png
+open-graph: true
+image: ../../images/pbi_thumb.png
 author: "Vertikal"
 date: "2023-10-15"
 description: Build a sales analytics dashboard using Power BI and DAX.
