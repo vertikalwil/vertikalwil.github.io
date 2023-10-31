@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Vertikal">
+<meta name="dcterms.date" content="2023-10-31">
+<meta name="description" content="End-to-end Data Automation: Data Scraping, Visualization, and Model Monitoring with Airflow">
 
-<title>Vertikal Willis – portfolios</title>
+<title>Vertikal Willis - Building a data automation pipeline with Apache Airflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,35 +63,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HTDP9XG4SJ"></script>
 
 <script type="text/javascript">
@@ -102,10 +74,14 @@ gtag('config', 'G-HTDP9XG4SJ', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="assets/ek-styles.css">
+<link rel="stylesheet" href="../../assets/ek-styles.css">
+<meta property="og:title" content="Vertikal Willis - Building a data automation pipeline with Apache Airflow">
+<meta property="og:description" content="End-to-end Data Automation: Data Scraping, Visualization, and Model Monitoring with Airflow">
+<meta property="og:image" content="https://vertikalwil.github.io/images/flow1.png">
+<meta property="og:site-name" content="Vertikal Willis">
+<meta property="og:image:height" content="1446">
+<meta property="og:image:width" content="2594">
 </head>
 
 <body class="nav-fixed">
@@ -115,7 +91,7 @@ gtag('config', 'G-HTDP9XG4SJ', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">VERTIKAL W.<span class="icon-line"></span></span>
     </a>
   </div>
@@ -126,15 +102,15 @@ gtag('config', 'G-HTDP9XG4SJ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./portfolios.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../portfolios.html" rel="" target="">
  <span class="menu-text">portfolios</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks.html" rel="" target="">
+    <a class="nav-link" href="../../talks.html" rel="" target="">
  <span class="menu-text">talks</span></a>
   </li>  
 </ul>
@@ -145,198 +121,152 @@ gtag('config', 'G-HTDP9XG4SJ', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Building a data automation pipeline with Apache Airflow</h1>
+                  <div>
+        <div class="description">
+          End-to-end Data Automation: Data Scraping, Visualization, and Model Monitoring with Airflow
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">data-visualization</div>
+                <div class="quarto-category">airflow</div>
+                <div class="quarto-category">pipelines</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Vertikal </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 31, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="DAX">DAX <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Power_BI">Power_BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="airflow">airflow <span class="quarto-category-count">(1)</span></div><div class="category" data-category="classification">classification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dashboard">dashboard <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data-science">data-science <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data-visualization">data-visualization <span class="quarto-category-count">(2)</span></div><div class="category" data-category="machine-learning">machine-learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="pipelines">pipelines <span class="quarto-category-count">(1)</span></div><div class="category" data-category="regression">regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="web-scrap">web-scrap <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#task-1-2-3" id="toc-task-1-2-3" class="nav-link" data-scroll-target="#task-1-2-3">Task 1, 2, &amp; 3</a></li>
+  <li><a href="#task-4-5-6" id="toc-task-4-5-6" class="nav-link" data-scroll-target="#task-4-5-6">Task 4, 5, &amp; 6</a></li>
+  <li><a href="#task-4a-5a" id="toc-task-4a-5a" class="nav-link" data-scroll-target="#task-4a-5a">Task 4a &amp; 5a</a></li>
+  <li><a href="#demonstration" id="toc-demonstration" class="nav-link" data-scroll-target="#demonstration">Demonstration</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<p>I’ve come to realize that a data scientist’s role includes building data pipelines, monitoring machine learning models, and creating/maintaining visualization dashboards. In this mini-project, I’ve implemented a comprehensive end-to-end data automation using Apache Airflow, encompassing data scraping, model monitoring, and updating power BI visualization dashboard.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Take a look at diagram below.</p>
+<p><img src="../../images/flow1.png" width="650px;" height="400px"> </p>
+<p>This DAG consists of a total of eight tasks. It starts with fresh housing data being scraped as input, which is then fed into a ML model (predicting houses prices) . The model performance will be evaluated on the new data using Evidently.ai. Additionally, the newly scraped data is also updated to a Google Sheet-based Power BI data source, updating the Power BI visualization dashboard.</p>
+<p>In summary:<br> Input : New data (scrapped data)<br> Output1 : updated model monitoring result.<br> Output2 : updated power BI online dashboard.<br></p>
+<p>The data is about houses information in Tangerang City, with more than 40 sub-districts.</p>
+<p>To prepare for this project, there are some requirements: <br><br> <strong>WSL2 (Windows sub-system for linux)</strong><br> Given that I’m using Windows 11, I’ll use WSL2.<br><br> <strong>Airflow with Docker</strong><br> Airflow needs to be installed within a Docker environment to create an isolated environment for workflow orchestration.<br><br> <strong>Power BI Pro Account &amp; Microsoft Azure Account</strong><br> These accounts are essential for utilizing the Power BI REST API, which is necessary to refresh the Power BI visualization dashboard.<br><br> <strong>ML Model</strong><br> Prior to commencing the project, I’ve conducted data exploration and experimented with various ML models to ensure the best model is ready.<br><br> <strong>Scraping Application</strong><br> In this project, I’ll be using Scrapy for web scraping tasks.</p>
+</section>
+<section id="task-1-2-3" class="level2">
+<h2 class="anchored" data-anchor-id="task-1-2-3">Task 1, 2, &amp; 3</h2>
+<p>Below is the diagram of task 1, 2 &amp; 3 <br></p>
+<p><img src="../../images/flow2.png" width="600px;" height="400px"> </p>
+<p>Flow of task 1:</p>
+<ul>
+<li><p>Establish connection to host (WSL2) from docker container via SSH Connection.</p></li>
+<li><p>Execute shell script to run scrappy.</p></li>
+<li><p>The scrapped file will be in csv format and uploaded to shared folder.</p></li>
+</ul>
+<p>Flow of task 2:</p>
+<ul>
+<li><p>Get the scrapped file from shared folder.</p></li>
+<li><p>Transform or change the data dimension into proper format.</p></li>
+<li><p>Upload the new transformed file into the shared folder.</p></li>
+</ul>
+<p>Flow of task 3:</p>
+<ul>
+<li><p>Connect to PostgreSQL database.</p></li>
+<li><p>Get the transformed data from shared folder.</p></li>
+<li><p>Upload it into PostgreSQL database.</p></li>
+</ul>
+</section>
+<section id="task-4-5-6" class="level2">
+<h2 class="anchored" data-anchor-id="task-4-5-6">Task 4, 5, &amp; 6</h2>
+<p>Below is the diagram of task 4, 5 &amp; 6 <br></p>
+<p><img src="../../images/flow3.png" width="600px;" height="400px"> </p>
+<p>Flow of task 4:</p>
+<ul>
+<li><p>Get data from database.</p></li>
+<li><p>Clean the data for the purpose of data visualization.</p></li>
+<li><p>Upload it to shared folder.</p></li>
+</ul>
+<p>Flow of task 5:</p>
+<ul>
+<li><p>Connect to host machine via SSH connection.</p></li>
+<li><p>Execute python script to get the cleaned data from shared folder and upload it to google sheet via google spreadsheet API.</p></li>
+</ul>
+<p>Flow of task 6:</p>
+<ul>
+<li><p>Connect to power BI via power BI API.</p></li>
+<li><p>Refresh the power bi visualization dashboard.</p></li>
+<li><p>Power BI will detect changes in dataset (google sheet) which already updated on task 5.</p></li>
+<li><p>Power BI will update the visualization based on the new dataset.</p></li>
+</ul>
+<p>Below is the Power BI visualization dashboard :</p>
+<iframe title="house" width="800" height="473.5" src="https://app.powerbi.com/view?r=eyJrIjoiMzExYWYwNjMtMzc1NC00NzJjLThjMzYtMDVkNjQ3MzliZWQ4IiwidCI6ImYyNjFiOWU2LTAzNTAtNDJkMy1hYjJkLTcyODI3NWMzY2ZlYSIsImMiOjEwfQ%3D%3D" frameborder="0" allowfullscreen="true">
+</iframe>
+</section>
+<section id="task-4a-5a" class="level2">
+<h2 class="anchored" data-anchor-id="task-4a-5a">Task 4a &amp; 5a</h2>
+<p>Below is the diagram of task 4a &amp; 5a <br></p>
+<p><img src="../../images/flow4.png" width="600px;" height="400px"> </p>
+<p>Flow of task 4a:</p>
+<ul>
+<li><p>Get data from database.</p></li>
+<li><p>Clean the data for the purpose of Machine Learning.</p></li>
+<li><p>Upload it to shared folder.</p></li>
+</ul>
+<p>Flow of task 5a:</p>
+<ul>
+<li><p>Connect to host machine via SSH connection.</p></li>
+<li><p>Execute python script to get the cleaned data from shared folder and run Evidently.ai to generate model report.</p></li>
+<li><p>Generate the report as html file.</p></li>
+</ul>
+</section>
+<section id="demonstration" class="level2">
+<h2 class="anchored" data-anchor-id="demonstration">Demonstration</h2>
+<p>On this video below, I’m going to demonstrate how to run the Airflow DAG and illustrate the expected results.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JM7SpDz-AY4?si=Ytc6HnsRO08-Idb3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="data-visualization,airflow,pipelines" data-listing-date-sort="1698685200000" data-listing-file-modified-sort="1698748795306" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./portfolios/airflow_docker/index.html"> <p class="card-img-top"><img src="images/flow1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./portfolios/airflow_docker/index.html">
-<h3 class="no-anchor listing-title">
-Building a data automation pipeline with Apache Airflow
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data-visualization'); return false;">
-data-visualization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('airflow'); return false;">
-airflow
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('pipelines'); return false;">
-pipelines
-</div>
-</div>
-<a href="./portfolios/airflow_docker/index.html">
-<div class="listing-description">
-<p>End-to-end Data Automation: Data Scraping, Visualization, and Model Monitoring with Airflow</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./portfolios/airflow_docker/index.html">
-<div class="listing-date">
-Oct 31, 2023
-</div>
-<div class="listing-author">
-Vertikal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="data-visualization,Power_BI,dashboard,DAX" data-listing-date-sort="1697302800000" data-listing-file-modified-sort="1697362232188" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./portfolios/pbi/index.html"> <img src="./images/pbi_thumb.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./portfolios/pbi/index.html">
-<h3 class="no-anchor listing-title">
-Advanced Power BI dashboard
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data-visualization'); return false;">
-data-visualization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Power_BI'); return false;">
-Power_BI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('dashboard'); return false;">
-dashboard
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('DAX'); return false;">
-DAX
-</div>
-</div>
-<a href="./portfolios/pbi/index.html">
-<div class="listing-description">
-<p>Build a sales analytics dashboard using Power BI and DAX.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./portfolios/pbi/index.html">
-<div class="listing-date">
-Oct 15, 2023
-</div>
-<div class="listing-author">
-Vertikal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="regression,machine-learning,data-science,web-scrap" data-listing-date-sort="1696870800000" data-listing-file-modified-sort="1697081711563" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./portfolios/houses_tangerang/index.html"> <img src="./images/tangerang.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./portfolios/houses_tangerang/index.html">
-<h3 class="no-anchor listing-title">
-Tangerang house price prediction
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
-regression
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
-machine-learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data-science'); return false;">
-data-science
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('web-scrap'); return false;">
-web-scrap
-</div>
-</div>
-<a href="./portfolios/houses_tangerang/index.html">
-<div class="listing-description">
-<p>Predicting houses in Tangerang with more than 40 regions based on a real dataset scraped from one of the largest online house listings in Indonesia.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./portfolios/houses_tangerang/index.html">
-<div class="listing-date">
-Oct 10, 2023
-</div>
-<div class="listing-author">
-Vertikal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="classification,machine-learning,data-science" data-listing-date-sort="1690995600000" data-listing-file-modified-sort="1697511016684" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./portfolios/telco_churn/index.html"> <img src="./images/telco-thumbnail.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./portfolios/telco_churn/index.html">
-<h3 class="no-anchor listing-title">
-Telco customer churn analysis
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('classification'); return false;">
-classification
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
-machine-learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data-science'); return false;">
-data-science
-</div>
-</div>
-<a href="./portfolios/telco_churn/index.html">
-<div class="listing-description">
-<p>Advanced analysis, model building and model deployment on telco customer churn dataset.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./portfolios/telco_churn/index.html">
-<div class="listing-date">
-Aug 3, 2023
-</div>
-<div class="listing-author">
-Vertikal
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -588,5 +518,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
