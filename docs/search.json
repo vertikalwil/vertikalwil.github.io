@@ -39,7 +39,7 @@
     "href": "portfolios/airflow_docker/index.html#task-4a-5a",
     "title": "Building a data automation pipeline with Apache Airflow",
     "section": "Task 4a & 5a",
-    "text": "Task 4a & 5a\nBelow is the diagram of task 4a & 5a \n \nFlow of task 4a:\n\nGet data from database.\nClean the data for the purpose of Machine Learning.\nUpload it to shared folder.\n\nFlow of task 5a:\n\nConnect to host machine via SSH connection.\nExecute python script to get the cleaned data from shared folder and run Evidently.ai to generate model report.\nGenerate the report as html file."
+    "text": "Task 4a & 5a\nBelow is the diagram of task 4a & 5a \n \nFlow of task 4a:\n\nGet data from database.\nClean the data for the purpose of Machine Learning.\nUpload it to shared folder.\n\nFlow of task 5a:\n\nConnect to host machine via SSH connection.\nExecute python script to get the cleaned data from shared folder and run Evidently.ai to generate model report.\nGenerate the report as html file.\n\nBelow is the preview of the report:"
   },
   {
     "objectID": "portfolios/airflow_docker/index.html#demonstration",
