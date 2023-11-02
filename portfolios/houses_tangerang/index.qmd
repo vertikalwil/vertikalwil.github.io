@@ -22,7 +22,7 @@ This is my first end-to-end project with a scraped dataset. I used Scrapy as my 
 
 One of the most important lessons I learned in this project is the significance of sample selection. When training a machine learning model, we typically split the data into a training and test set. If the model performs well on both sets, we may consider it to be a good model, which could be true. However, when we apply the model to new test data from different samples, the results may not meet our expectations. This issue doesn't stem from the machine learning algorithm itself but rather from the initial sample selection, which may not accurately represent the population.
 
-For scrapy installation and setup for this project please visit : 
+For scrapy installation and setup for this project please visit : [Github link](https://github.com/vertikalwil/web_scrap/tree/main)
 
 ::: {style="font-size: 90%;"}
 {{< embed ../../ipynb/houses/house_tangerang.ipynb echo=true >}}
