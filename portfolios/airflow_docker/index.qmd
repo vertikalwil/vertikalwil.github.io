@@ -10,10 +10,11 @@ toc-title: Contents
 format:
   html:
     code-fold: show
-
 ---
 
 I've come to realize that a data scientist's role includes building data pipelines, monitoring machine learning models, and creating/maintaining visualization dashboards. In this mini-project, I've implemented a comprehensive end-to-end data automation using Apache Airflow, encompassing data scraping, model monitoring, and updating power BI visualization dashboard.
+
+For Airflow installation and setup please visit : [Github link](https://github.com/vertikalwil/airflow_project)
 
 ## Overview
 
