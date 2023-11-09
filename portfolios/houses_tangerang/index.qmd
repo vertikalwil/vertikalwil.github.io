@@ -24,6 +24,11 @@ One of the most important lessons I learned in this project is the significance 
 
 For scrapy installation and setup for this project please visit : [Github link](https://github.com/vertikalwil/web_scrap/tree/main)
 
+Presentation slide: (go full screen by clicking 3-dot option button and choose ‘Full Screen’)
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTSCTAOOrHbkHTDo-WYXmd-yyuQo2Zi7Cvj3JUn-W1sciyGO61SRcLiDWE9vetTdg/pub?start=false&loop=false&delayms=3000" frameborder="0" width="750" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
 ::: {style="font-size: 90%;"}
 {{< embed ../../ipynb/houses/house_tangerang.ipynb echo=true >}}
 :::
