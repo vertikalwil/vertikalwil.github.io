@@ -1,0 +1,42 @@
+---
+title: "NLP: Multilanguage Toxicity Detection"
+open-graph: true
+author: "Vertikal"
+date: "2023-11-10"
+description: "Build a deep learning model to detect toxicity in sentences in any language and deploy it on ShinyApps"
+categories: [deep-learning, NLP, data-science]
+toc: true
+toc-title: Contents
+format:
+  html:
+    code-fold: show
+---
+
+Embarking on the adventure of natural language processing, my recent project aimed to tackle the challenge of sniffing out toxicity in sentences. Armed with a dataset I snagged from Kaggle, I set out to build a NLP model from scratch using tensorflow & keras. The main goal? Classifying sentences into distinct toxicity categories like TOXIC, SEVERE TOXIC, OBSCENE, INSULT, and IDENTITY HATE. 
+
+It's not just about the code and algorithms – this project is a small step in making the online world a more pleasant place by sifting through and addressing various shades of unfriendly language. I must admit that the model I've been using isn't quite powerful enough due to a shortage of resources, such as the dataset used and the computational power required for training the model.
+
+Click the picture below to run the app.
+
+<a href="https://vertikalwil.shinyapps.io/project_nlp/">
+    <img src="../../images/nlp.png" alt="Your Image Description" width="750" height="400">
+</a>
+
+For source code : [Github](https://github.com/vertikalwil/Toxicity-Detection)
+
+For dataset : [Kaggle](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/overview)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@
   {
     "listing": "/portfolios.html",
     "items": [
+      "/portfolios/project_nlp/index.html",
       "/portfolios/airflow_docker/index.html",
       "/portfolios/pbi/index.html",
       "/portfolios/houses_tangerang/index.html",

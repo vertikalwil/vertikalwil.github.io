@@ -2,58 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://vertikalwil.github.io/about.html</loc>
-    <lastmod>2023-11-09T13:57:59.024Z</lastmod>
+    <lastmod>2023-11-12T09:56:03.516Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/portfolios/airflow_docker/index.html</loc>
-    <lastmod>2023-11-02T15:41:13.175Z</lastmod>
+    <lastmod>2023-11-12T09:56:02.736Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/portfolios/houses_tangerang/index.html</loc>
-    <lastmod>2023-11-09T13:57:15.149Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/ipynb/telco/final-project.html</loc>
-    <lastmod>2023-11-02T15:41:07.825Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/ipynb/houses/house_tangerang.html</loc>
-    <lastmod>2023-11-02T15:41:03.565Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/index.html</loc>
-    <lastmod>2023-11-02T15:41:01.055Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/talks/errors_type/index.html</loc>
-    <lastmod>2023-11-02T15:41:00.415Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/talks/residuals_plot/index.html</loc>
-    <lastmod>2023-11-02T15:41:00.065Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/talks/missing_values/index.html</loc>
-    <lastmod>2023-11-02T15:41:00.835Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/portfolios.html</loc>
-    <lastmod>2023-11-09T13:57:15.647Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vertikalwil.github.io/ipynb/telco/final-project-original.html</loc>
-    <lastmod>2023-11-02T15:41:05.725Z</lastmod>
+    <lastmod>2023-11-12T09:56:02.126Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/portfolios/telco_churn/index.html</loc>
-    <lastmod>2023-11-09T13:56:27.883Z</lastmod>
+    <lastmod>2023-11-12T09:55:59.526Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/ipynb/telco/final-project-original.html</loc>
+    <lastmod>2023-11-12T09:55:54.896Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/portfolios.html</loc>
+    <lastmod>2023-11-12T09:55:50.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/talks/missing_values/index.html</loc>
+    <lastmod>2023-11-12T09:55:49.646Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/talks/residuals_plot/index.html</loc>
+    <lastmod>2023-11-12T09:55:48.816Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/talks/errors_type/index.html</loc>
+    <lastmod>2023-11-12T09:55:49.206Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/index.html</loc>
+    <lastmod>2023-11-12T09:55:49.856Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/ipynb/houses/house_tangerang.html</loc>
+    <lastmod>2023-11-12T09:55:52.696Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/ipynb/telco/final-project.html</loc>
+    <lastmod>2023-11-12T09:55:57.026Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vertikalwil.github.io/portfolios/project_nlp/index.html</loc>
+    <lastmod>2023-11-12T09:55:59.756Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/portfolios/pbi/index.html</loc>
-    <lastmod>2023-11-02T15:41:12.885Z</lastmod>
+    <lastmod>2023-11-12T09:56:02.456Z</lastmod>
   </url>
   <url>
     <loc>https://vertikalwil.github.io/talks.html</loc>
-    <lastmod>2023-11-02T15:41:13.545Z</lastmod>
+    <lastmod>2023-11-12T09:56:03.106Z</lastmod>
   </url>
 </urlset>

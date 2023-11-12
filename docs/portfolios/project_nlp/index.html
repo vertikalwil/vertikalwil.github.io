@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Vertikal">
+<meta name="dcterms.date" content="2023-11-10">
+<meta name="description" content="Build a deep learning model to detect toxicity in sentences in any language and deploy it on ShinyApps">
 
-<title>Vertikal Willis – portfolios</title>
+<title>Vertikal Willis - NLP: Multilanguage Toxicity Detection</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,35 +63,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HTDP9XG4SJ"></script>
 
 <script type="text/javascript">
@@ -102,10 +74,14 @@ gtag('config', 'G-HTDP9XG4SJ', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="assets/ek-styles.css">
+<link rel="stylesheet" href="../../assets/ek-styles.css">
+<meta property="og:title" content="Vertikal Willis - NLP: Multilanguage Toxicity Detection">
+<meta property="og:description" content="Build a deep learning model to detect toxicity in sentences in any language and deploy it on ShinyApps">
+<meta property="og:image" content="https://vertikalwil.github.io/images/nlp.png">
+<meta property="og:site-name" content="Vertikal Willis">
+<meta property="og:image:height" content="1626">
+<meta property="og:image:width" content="3822">
 </head>
 
 <body class="nav-fixed">
@@ -115,7 +91,7 @@ gtag('config', 'G-HTDP9XG4SJ', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">VERTIKAL W.<span class="icon-line"></span></span>
     </a>
   </div>
@@ -126,15 +102,15 @@ gtag('config', 'G-HTDP9XG4SJ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./portfolios.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../portfolios.html" rel="" target="">
  <span class="menu-text">portfolios</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks.html" rel="" target="">
+    <a class="nav-link" href="../../talks.html" rel="" target="">
  <span class="menu-text">talks</span></a>
   </li>  
 </ul>
@@ -145,239 +121,66 @@ gtag('config', 'G-HTDP9XG4SJ', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">NLP: Multilanguage Toxicity Detection</h1>
+                  <div>
+        <div class="description">
+          Build a deep learning model to detect toxicity in sentences in any language and deploy it on ShinyApps
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">deep-learning</div>
+                <div class="quarto-category">NLP</div>
+                <div class="quarto-category">data-science</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Vertikal </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 10, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="DAX">DAX <span class="quarto-category-count">(1)</span></div><div class="category" data-category="NLP">NLP <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Power_BI">Power_BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="airflow">airflow <span class="quarto-category-count">(1)</span></div><div class="category" data-category="classification">classification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dashboard">dashboard <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data-science">data-science <span class="quarto-category-count">(3)</span></div><div class="category" data-category="data-visualization">data-visualization <span class="quarto-category-count">(2)</span></div><div class="category" data-category="deep-learning">deep-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="machine-learning">machine-learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="pipelines">pipelines <span class="quarto-category-count">(1)</span></div><div class="category" data-category="regression">regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="web-scrap">web-scrap <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<p>Embarking on the adventure of natural language processing, my recent project aimed to tackle the challenge of sniffing out toxicity in sentences. Armed with a dataset I snagged from Kaggle, I set out to build a NLP model from scratch using tensorflow &amp; keras. The main goal? Classifying sentences into distinct toxicity categories like TOXIC, SEVERE TOXIC, OBSCENE, INSULT, and IDENTITY HATE.</p>
+<p>It’s not just about the code and algorithms – this project is a small step in making the online world a more pleasant place by sifting through and addressing various shades of unfriendly language. I must admit that the model I’ve been using isn’t quite powerful enough due to a shortage of resources, such as the dataset used and the computational power required for training the model.</p>
+<p>Click the picture below to run the app.</p>
+<p><a href="https://vertikalwil.shinyapps.io/project_nlp/"> <img src="../../images/nlp.png" alt="Your Image Description" width="750" height="400"> </a></p>
+<p>For source code : <a href="https://github.com/vertikalwil/Toxicity-Detection">Github</a></p>
+<p>For dataset : <a href="https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/overview">Kaggle</a></p>
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="deep-learning,NLP,data-science" data-listing-date-sort="1699549200000" data-listing-file-modified-sort="1699782859306" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./portfolios/project_nlp/index.html"> <p class="card-img-top"><img src="images/nlp.png" alt="Your Image Description"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./portfolios/project_nlp/index.html">
-<h3 class="no-anchor listing-title">
-NLP: Multilanguage Toxicity Detection
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('deep-learning'); return false;">
-deep-learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('NLP'); return false;">
-NLP
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data-science'); return false;">
-data-science
-</div>
-</div>
-<a href="./portfolios/project_nlp/index.html">
-<div class="listing-description">
-<p>Build a deep learning model to detect toxicity in sentences in any language and deploy it on ShinyApps</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./portfolios/project_nlp/index.html">
-<div class="listing-date">
-Nov 10, 2023
-</div>
-<div class="listing-author">
-Vertikal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="data-visualization,airflow,pipelines" data-listing-date-sort="1698685200000" data-listing-file-modified-sort="1698939650955" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./portfolios/airflow_docker/index.html"> <p class="card-img-top"><img src="images/flow1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./portfolios/airflow_docker/index.html">
-<h3 class="no-anchor listing-title">
-Building a data automation pipeline with Apache Airflow
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data-visualization'); return false;">
-data-visualization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('airflow'); return false;">
-airflow
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('pipelines'); return false;">
-pipelines
-</div>
-</div>
-<a href="./portfolios/airflow_docker/index.html">
-<div class="listing-description">
-<p>End-to-end Data Automation: Data Scraping, Visualization, and Model Monitoring with Airflow</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./portfolios/airflow_docker/index.html">
-<div class="listing-date">
-Oct 31, 2023
-</div>
-<div class="listing-author">
-Vertikal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="data-visualization,Power_BI,dashboard,DAX" data-listing-date-sort="1697302800000" data-listing-file-modified-sort="1697362232188" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./portfolios/pbi/index.html"> <img src="./images/pbi_thumb.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./portfolios/pbi/index.html">
-<h3 class="no-anchor listing-title">
-Advanced Power BI dashboard
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data-visualization'); return false;">
-data-visualization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Power_BI'); return false;">
-Power_BI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('dashboard'); return false;">
-dashboard
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('DAX'); return false;">
-DAX
-</div>
-</div>
-<a href="./portfolios/pbi/index.html">
-<div class="listing-description">
-<p>Build a sales analytics dashboard using Power BI and DAX.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./portfolios/pbi/index.html">
-<div class="listing-date">
-Oct 15, 2023
-</div>
-<div class="listing-author">
-Vertikal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="regression,machine-learning,data-science,web-scrap" data-listing-date-sort="1696870800000" data-listing-file-modified-sort="1699538232126" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./portfolios/houses_tangerang/index.html"> <img src="./images/tangerang.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./portfolios/houses_tangerang/index.html">
-<h3 class="no-anchor listing-title">
-Tangerang house price prediction
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
-regression
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
-machine-learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data-science'); return false;">
-data-science
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('web-scrap'); return false;">
-web-scrap
-</div>
-</div>
-<a href="./portfolios/houses_tangerang/index.html">
-<div class="listing-description">
-<p>Predicting houses in Tangerang with more than 40 regions based on a real dataset scraped from one of the largest online house listings in Indonesia.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./portfolios/houses_tangerang/index.html">
-<div class="listing-date">
-Oct 10, 2023
-</div>
-<div class="listing-author">
-Vertikal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="classification,machine-learning,data-science" data-listing-date-sort="1690995600000" data-listing-file-modified-sort="1698938231675" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./portfolios/telco_churn/index.html"> <img src="./images/telco-thumbnail.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./portfolios/telco_churn/index.html">
-<h3 class="no-anchor listing-title">
-Telco customer churn analysis
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('classification'); return false;">
-classification
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
-machine-learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data-science'); return false;">
-data-science
-</div>
-</div>
-<a href="./portfolios/telco_churn/index.html">
-<div class="listing-description">
-<p>Advanced analysis, model building and model deployment on telco customer churn dataset.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./portfolios/telco_churn/index.html">
-<div class="listing-date">
-Aug 3, 2023
-</div>
-<div class="listing-author">
-Vertikal
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -629,5 +432,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
